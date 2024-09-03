@@ -8,8 +8,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
-
+    <!--Navbar-->
+    <nav>
+        <div class="nav-wrapper">
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Search/Filter</a></li>
+            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Log In for Organizations</a></li>
+          </ul>
+        </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Search/Filter</a></li>
+            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Log In for Organizations</a></li>
+      </ul>
+    <!-- Main Content -->
+  <div class="container">
     
+    {% block content %}
+    {% endblock %}
+
+  </div>
+
+  <hr>
+  <!--Footer-->
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+      © 2024 Copyright Katalin Molnar
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
 </body>
 </html>
