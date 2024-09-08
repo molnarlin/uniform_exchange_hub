@@ -10,29 +10,47 @@
 <body>
     <!--Navbar-->
     <nav>
-        <div class="nav-wrapper">
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Search/Filter</a></li>
-            <li><a href="#">Contact Support</a></li>
-            <li><a href="#">Log In for Organizations</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Search/Filter</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul>
+        <a href="#" class="brand-logo right">Log In for Organizations</a>
+      </div>
+    </nav>
       <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Search/Filter</a></li>
-            <li><a href="#">Contact Support</a></li>
-            <li><a href="#">Log In for Organizations</a></li>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Search/Filter</a></li>
+        <li><a href="#">Contact Support</a></li>
+        <li><a href="#">Log In for Organizations</a></li>
       </ul>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('/static/images/home-page-hero.jfif')">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1 class="green-text text-lighten-5">Uniform Exchange Hub</h1>
+              <span class="green-text text-lighten-5 subheading">Find, donate pre-loved school uniforms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
     <!-- Main Content -->
   <div class="container">
     
     {% block content %}
+
     {% endblock %}
 
   </div>
@@ -42,12 +60,12 @@
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">
-      © 2024 Copyright Katalin Molnar
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        © 2024 Copyright Katalin Molnar
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
       </div>
     </div>
   </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
 </body>
 </html>
