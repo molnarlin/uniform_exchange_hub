@@ -6,11 +6,12 @@
     <title>Uniform Exchange Hub</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <!--Navbar-->
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper green">
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li><a href="{{ url_for('index') }}">Home</a></li>
           <li><a href="#">About Us</a></li>
@@ -21,7 +22,7 @@
         <a href="#" class="brand-logo right">Log In for Organizations</a>
       </div>
     </nav>
-      <ul class="sidenav" id="mobile-demo">
+      <ul class="sidenav green" id="mobile-demo">
         <li><a href="{{ url_for('index') }}">Home</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">FAQs</a></li>
@@ -57,7 +58,7 @@
 
   <hr>
   <!--Footer-->
-  <footer class="page-footer">
+  <footer class="page-footer green darken-2">
     <div class="footer-copyright">
       <div class="container">
         © 2024 Copyright Katalin Molnar
@@ -67,5 +68,6 @@
   </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+<script src="/static/js/script.js"></script>
 </body>
 </html>
