@@ -23,3 +23,7 @@ body {
 .card{
     padding: 5vh;
 }
+
+div {
+    text-align: justify;
+  }
