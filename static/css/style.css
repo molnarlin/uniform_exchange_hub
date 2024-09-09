@@ -15,7 +15,11 @@ body {
     padding-bottom: 30vh;
 }
 
-.register-img{
-    width: 100px;
-    height: 50px;
+#register-img{
+    width: 30vh;
+    margin: 5%;
+}
+
+.card{
+    padding: 5vh;
 }
