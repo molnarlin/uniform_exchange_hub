@@ -34,5 +34,7 @@ This is the third milestone project for Runshaw College and Code Institute. It i
 ## 9. Supported screens and browsers
 ## 10. Deployment
    ### 10.1. via VS Code
+   If you want to open the file locally, type `python3 run.py` in terminal.
    ### 10.2. via Heroku
+   I deployed it on [Heroku](https://git.heroku.com/uniform-exchange-hub.git)
 ## 11. Credits
