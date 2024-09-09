@@ -9,3 +9,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.site-heading{
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+}
+
+.register-img{
+    width: 100px;
+    height: 50px;
+}
