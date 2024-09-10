@@ -11,8 +11,8 @@ body {
 }
 
 .site-heading{
-    padding-top: 30vh;
-    padding-bottom: 30vh;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
 }
 
 #register-img{
@@ -27,3 +27,7 @@ body {
 div {
     text-align: justify;
   }
+
+.flashes h4 {
+    line-height: 2;
+}
