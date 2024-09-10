@@ -14,24 +14,26 @@
       <div class="nav-wrapper green">
         <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
           {% if session.user %}
             <li><a href="{{ url_for('profile', user_name=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          {% else %}
+            <li><a href="#">Search</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
           {% endif %}
       </div>
     </nav>
       <ul class="sidenav green" id="mobile-demo">
-          <li><a href="{{ url_for('index') }}">Home</a></li>
-          <li><a href="#">Search</a></li>
-          <li><a href="{{ url_for('register') }}">Register</a></li>
-          <li><a href="{{ url_for('login') }}">Log In</a></li>
-        {% if session.user %}
-          <li><a href="{{ url_for('profile', user_name=session['user']) }}">Profile</a></li>
-          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-        {% endif %}
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+          {% if session.user %}
+            <li><a href="{{ url_for('profile', user_name=session['user']) }}">Profile</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          {% else %}
+            <li><a href="#">Search</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+          {% endif %}
       </ul>
 
   <!-- Page Header -->
