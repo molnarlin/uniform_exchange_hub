@@ -1,89 +1,107 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
-                <h3 class="center-align light-green-text text-darken-4">
-                    {{ user_name }}'s Profile
-                </h3>
-            </div>
-        </div>
+<div class="row">
+  <div class="col s12 m8 offset-m2">
+    <div class="card-panel">
+      <h3 class="center-align light-green-text text-darken-4">
+        {{ user_name }}'s Profile
+      </h3>
     </div>
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <h4>What date is your event?</h4>
-            <input type="text" class="datepicker">
-        </div>
+  </div>
+</div>
+<div class="row">
+  <form action="#">
+    <div class="input-field col s12">
+      <h4>Which school is this uniform for?</h4>
+      <textarea id="textarea1" class="materialize-textarea"></textarea>
+      <label for="textarea1"></label>
+  </div>
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <input id="icon_prefix" type="text" class="validate">
+    <label for="icon_prefix" class="black-text">Contact person's name</label>
+  </div>
+  <div class="input-field col s6">
+    <i class="material-icons prefix">phone</i>
+    <input id="icon_telephone" type="tel" class="validate">
+    <label for="icon_telephone" class="black-text">Telephone</label>
+  </div>
+  <div>
+  <div class="input-field col s6">
+    <i class="material-icons prefix">email</i>
+    <input id="icon_email" type="email" class="validate">
+    <label for="icon_email" class="black-text">Email</label>
+  </div>
+  <div class="input-field col s6">
+    <i class="material-icons prefix">home</i>
+    <input id="icon_home" type="text" class="validate">
+    <label for="icon_home" class="black-text">Address</label>
+  </div>
+  </div>
+  <div class="col s12">
+    <h4>Events, if you have:</h4>
+    <label for="textarea2" class="black-text">Place of the event</label>
+    <textarea id="textarea2" class="materialize-textarea s6"></textarea>
+    <input type="text" class="datepicker s6">
+  </div>
+  <div class="col s12 black-text">
+    <h4>What items would you like to donate?</h4>
+    <p>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Shirt</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Trousers</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox"/>
+        <span class="black-text">Jumper/Cardigan</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Shoes</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Shorts</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Tye</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Tops</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Joggers</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Trainers</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Blouse</span>
+      </label>
+      <label class="checkbox-spacing">
+        <input type="checkbox" />
+        <span class="black-text">Skirt/Pinafore</span>
+      </label>
+    </p>
     </div>
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <h4>Where is this event takes place?</h4>
-            <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Textarea</label>
-            </div>
-        </div>
-    </div>
-    <div class="row"></div>
-        <div class="col s12 m8 offset-m2">
-            <h4>Which school is this uniform for?</h4>
-            <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Textarea</label>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <i class="material-icons prefix">account_circle</i>
-                      <input id="icon_prefix" type="text" class="validate">
-                      <label for="icon_prefix">Contact person's name</label>
-                    </div>
-                    <div class="input-field col s6">
-                      <i class="material-icons prefix">phone</i>
-                      <input id="icon_telephone" type="tel" class="validate">
-                      <label for="icon_telephone">Telephone</label>
-                    </div>
-                  </div>
-                </form>
-              </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <h4>What items would you like to donate?</h4>
-            <form action="#">
-                <p>
-                  <label>
-                    <input name="group1" type="radio"/>
-                    <span>Shirt</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input name="group1" type="radio"/>
-                    <span>Trouser</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input name="group1" type="radio" />
-                    <span>Jumper</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input name="group1" type="radio"/>
-                    <span>Shoes</span>
-                  </label>
-                </p>
-              </form>
-        </div>
-    </div>
-
+  </form>
+</div>
+       
+<div class="row">
+  <div class="col s12 center-align">
+    <a class="waves-effect waves-light btn-large black-text">Edit Profile</a>
+    <a class="waves-effect waves-light btn-large black-text">Save changes</a>
+    <a class="waves-effect waves-light btn-large black-text">Delete account</a>
+  </div>
+</div>
 {% endblock %}

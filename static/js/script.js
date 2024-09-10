@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems, options);
+    var options = {
+      defaultDate: new Date(2024, 1, 3),
+      setDefaultDate: true
+    };
+    var elems = document.querySelector('.datepicker');
+    var instance = M.Datepicker.init(elems, options);
+    // instance.open();
+    instance.setDate(new Date(2024, 2, 8));
   });

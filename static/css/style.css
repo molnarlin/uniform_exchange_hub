@@ -31,3 +31,7 @@ div {
 .flashes h4 {
     line-height: 2;
 }
+
+.checkbox-spacing {
+    padding-right: 40px;
+}
