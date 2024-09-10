@@ -3,6 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from werkzeug.security import generate_password_hash, check_password_hash
 from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
@@ -33,7 +34,7 @@ def register():
 
         register = {
             "user_name": request.form.get("user_name").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "user_password": generate_password_hash(request.form.get("user_password"))
         }
         mongo.db.users.insert_one(register)
 
