@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+      <div class="card-panel">
+        <h3 class="center-align light-green-text text-darken-4">
+          {{ user_name }}'s Profile
+        </h3>
+      </div>
+    </div>
+  </div>
+  {%  for user in users  %}
+  <div class="row">
+      <div class="input-field col s12">
+        <h4>Which school is this uniform for?</h4>
+        <p>{{  users.school_name }}</p>
+    </div>
+    <div class="input-field col s6">
+      <h5>Contact person's Name:</h5>
+      <p>{{  contact_person  }}</p>
+    </div>
+    <div class="input-field col s6">
+      <h5>Contact phone:</h5>
+      <p>{{  contact_phone  }}</p>
+    </div>
+    <div class="input-field col s6">
+      <h5>Contact email:</h5>
+      <p>{{  contact_email  }}</p>
+    </div>
+    <div class="input-field col s6">
+      <h5>Address:</h5>
+      <p>{{  contact_address  }}</p>
+    </div>
+    <div class="col s12">
+      <h4>Events, if you have:</h4>
+      <p>{{  event_place  }} <span>{{  event_date  }}</span></p>
+    </div>
+    <div class="col s12 black-text">
+      <h4>What items would you like to donate?</h4>
+      <p>{{  users.items }}</p>
+    </div>
+</div>
+   
+    {%  endfor  %}
+  {% endblock %}
