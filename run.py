@@ -21,8 +21,8 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html")
 
-@app.route("/get_users")
-def get_users():
+@app.route("/users/<user_name>", endpoint='get_users')
+def get_users(user_name):
      users = mongo.db.users.find()
      return render_template("users.html", users=users)
 
@@ -65,7 +65,7 @@ def login():
                         flash("Welcome, {}".format(
                             request.form.get("user_name")))
                         return redirect(url_for(
-                            "users", user_name=session["user"]))
+                            "get_users", user_name=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -78,17 +78,6 @@ def login():
 
     return render_template("login.html")
 
-
-@app.route("/users/<user_name>", methods=["GET", "POST"])
-def profile(user_name):
-    # grab the session user's username from db
-    user_name = mongo.db.users.find_one(
-        {"user_name": session["user"]})["user_name"]
-
-    if session["user"]:
-        return render_template("users.html", user_name=user_name)
-
-    return redirect(url_for("login"))
 
 @app.route("/logout")
 def logout():
