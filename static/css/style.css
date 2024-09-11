@@ -17,11 +17,12 @@ body {
 
 #register-img{
     width: 30vh;
-    margin: 5%;
+    margin-right: 10%;
 }
 
 .card{
-    padding: 5vh;
+    padding: 5%;
+    height: 35%;
 }
 
 div {
