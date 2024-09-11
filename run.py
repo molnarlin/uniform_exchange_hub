@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html")
 
-@app.route("/users")
+@app.route("/get_users")
 def get_users():
      users = mongo.db.users.find()
      return render_template("users.html", users=users)
