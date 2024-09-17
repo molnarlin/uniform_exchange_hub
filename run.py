@@ -18,13 +18,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-def index():
-    return render_template("index.html")
-
-@app.route("/users/<user_name>", endpoint='get_users')
-def get_users(user_name):
-     users = mongo.db.users.find()
-     return render_template("users.html", users=users)
+@app.route("/get_users")
+def get_users():
+    users = mongo.db.users.find()
+    return render_template("users.html", users=users)
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -85,6 +82,14 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("index"))
+
+
+@app.route("/profile/<user_name>", methods=["GET", "POST"])
+def profile(user_name):
+    # grab the session user's username from db
+    user_name = mongo.db.users.find_one(
+        {"user_name": session["user"]})["user_name"]
+    return render_template("profile.html", user_name=user_name)
 
 
 if __name__ == "__main__":
