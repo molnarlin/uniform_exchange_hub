@@ -22,5 +22,5 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelector('.datepicker');
     var instance = M.Datepicker.init(elems, options);
     // instance.open();
-    instance.setDate(new Date(2024, 2, 8));
+    instance.setDate(new Date());
   });
