@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uniform Exchange Hub</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    {% block styles %}
+    {% endblock %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -16,6 +18,7 @@
             <li><a href="{{ url_for('index') }}">Home</a></li>
           {% if session.user %}
             <li><a href="{{ url_for('users', user_name=session['user']) }}">Profile</a></li>
+            <li><a href="{{ url_for('') }}">Edit Profile</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           {% else %}
             <li><a href="#">Search</a></li>
@@ -28,6 +31,7 @@
             <li><a href="{{ url_for('index') }}">Home</a></li>
           {% if session.user %}
             <li><a href="{{ url_for('users', user_name=session['user']) }}">Profile</a></li>
+            <li><a href="{{ url_for('') }}">Edit Profile</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           {% else %}
             <li><a href="#">Search</a></li>
@@ -85,6 +89,8 @@
   </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
-<script src="/static/js/script.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% block scripts %}
+{% endblock %}
 </body>
 </html>
