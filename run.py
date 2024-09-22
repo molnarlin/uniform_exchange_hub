@@ -32,7 +32,7 @@ def users(user_name):
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    query = request.form.get("query")
+    query = request.args.get("query") if request.method == "GET" else request.form.get("query")
     users = list(mongo.db.users.find({"$text": {"$search": query}}))
     return render_template("users.html", users=users)
 
