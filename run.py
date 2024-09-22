@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/get_users")
 def get_users():
     users = list(mongo.db.users.find())
-    return render_template("users.html", users=users)
+    return render_template("index.html", users=users)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -104,70 +104,53 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_task", methods=["GET", "POST"])
-def add_task():
+@app.route("/edit_user/<user_id>", methods=["GET", "POST"])
+def edit_user(user_id):
     if request.method == "POST":
-        is_urgent = "on" if request.form.get("is_urgent") else "off"
-        task = {
-            "category_name": request.form.get("category_name"),
-            "task_name": request.form.get("task_name"),
-            "task_description": request.form.get("task_description"),
-            "is_urgent": is_urgent,
-            "due_date": request.form.get("due_date"),
-            "created_by": session["user"]
-        }
-        mongo.db.tasks.insert_one(task)
-        flash("Task Successfully Added")
-        return redirect(url_for("get_tasks"))
-
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_task.html", categories=categories)
-
-
-@app.route("/edit_task/<task_id>", methods=["GET", "POST"])
-def edit_task(task_id):
-    if request.method == "POST":
-        is_urgent = "on" if request.form.get("is_urgent") else "off"
         submit = {
-            "category_name": request.form.get("category_name"),
-            "task_name": request.form.get("task_name"),
-            "task_description": request.form.get("task_description"),
-            "is_urgent": is_urgent,
-            "due_date": request.form.get("due_date"),
+            "school_name": request.form.get("school_name"),
+            "user_name": request.form.get("user_name"),
+            "contact_person": request.form.get("contact_person"),
+            "contact_phone": request.form.get("contact_phone"),
+            "contact_email": request.form.get("contact_email"),
+            "contact_address": request.form.get("contact_address"),
+            "event_date": request.form.get("event_date"),
+            "event_place": request.form.get("event_place"),
+            "items": request.form.get("items"),
             "created_by": session["user"]
         }
-        mongo.db.tasks.update({"_id": ObjectId(task_id)}, submit)
-        flash("Task Successfully Updated")
+        mongo.db.users.update({"_id": ObjectId(user_id)}, submit)
+        flash("User Successfully Updated")
 
-    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_task.html", task=task, categories=categories)
-
-
-@app.route("/delete_task/<task_id>")
-def delete_task(task_id):
-    mongo.db.tasks.remove({"_id": ObjectId(task_id)})
-    flash("Task Successfully Deleted")
-    return redirect(url_for("get_tasks"))
+    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+    schools = mongo.db.schools.find().sort("school_name", 1)
+    return render_template("edit_user.html", user=user, schools=schools)
 
 
-@app.route("/get_categories")
-def get_categories():
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+@app.route("/delete_user/<user_id>")
+def delete_user(user_id):
+    mongo.db.users.remove({"_id": ObjectId(user_id)})
+    flash("User Successfully Deleted")
+    return redirect(url_for("index"))
 
 
-@app.route("/add_category", methods=["GET", "POST"])
-def add_category():
+@app.route("/get_schools")
+def get_schools():
+    schools = list(mongo.db.schools.find().sort("school_name", 1))
+    return render_template("schools.html", schools=schools)
+
+
+@app.route("/add_school", methods=["GET", "POST"])
+def add_school():
     if request.method == "POST":
-        category = {
-            "category_name": request.form.get("category_name")
+        school = {
+            "school_name": request.form.get("school_name")
         }
-        mongo.db.categories.insert_one(category)
-        flash("New Category Added")
-        return redirect(url_for("get_categories"))
+        mongo.db.schools.insert_one(school)
+        flash("New School Added")
+        return redirect(url_for("get_schools"))
 
-    return render_template("add_category.html")
+    return render_template("index.html")
 
 
 @app.route("/edit_school/<school_id>", methods=["GET", "POST"])
@@ -177,18 +160,18 @@ def edit_school(school_id):
             "school_name": request.form.get("school_name")
         }
         mongo.db.schools.update({"_id": ObjectId(school_id)}, submit)
-        flash("Category Successfully Updated")
+        flash("School Successfully Updated")
         return redirect(url_for("get_schools"))
 
     school = mongo.db.schools.find_one({"_id": ObjectId(school_id)})
-    return render_template("edit_school.html", school=school)
+    return render_template("edit_schools.html", school=school)
 
 
 @app.route("/delete_school/<school_id>")
 def delete_school(school_id):
     mongo.db.schools.remove({"_id": ObjectId(school_id)})
     flash("School Successfully Deleted")
-    return redirect(url_for("get_schools"))
+    return redirect(url_for("index"))
 
 
 if __name__ == "__main__":
