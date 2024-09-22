@@ -119,8 +119,9 @@ def edit_user(user_id):
             "items": request.form.get("items"),
             "created_by": session["user"]
         }
-        mongo.db.users.update({"_id": ObjectId(user_id)}, submit)
+        mongo.db.users.update_one({"_id": ObjectId(user_id)}, {"$set": submit})
         flash("User Successfully Updated")
+        return redirect(url_for("get_users"))
 
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
     schools = mongo.db.schools.find().sort("school_name", 1)

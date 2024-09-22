@@ -35,18 +35,18 @@
               {% endif %}
           </div>
           <div class="col s9">
-              <strong>{{ user.user_name }}</strong> : {{ user.event_date }}
+              <strong>{{ user.user_name }}</strong>
           </div>
       </div>
       <div class="collapsible-body">
-          <p>{{  school_name }}</p>
-          <p>{{  contact_person  }}</p>
-          <p>{{  contact_phone  }}</p>
-          <p>{{  contact_email  }}</p>
-          <p>{{  contact_address  }}</p>
-          <p>{{  event_place  }}</p>
-          <p>{{  event_date  }}</p>
-          <p>{{  items }}</p>
+          <p>{{  users.school_name }}</p>
+          <p>{{  users.contact_person  }}</p>
+          <p>{{  users.contact_phone  }}</p>
+          <p>{{  users.contact_email  }}</p>
+          <p>{{  users.contact_address  }}</p>
+          <p>{{  users.event_place  }}</p>
+          <p>{{  users.event_date  }}</p>
+          <p>{{  users.items }}</p>
       </div>
     </li>
     {% endfor %}
