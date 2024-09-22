@@ -24,6 +24,12 @@ def get_users():
     return render_template("index.html", users=users)
 
 
+@app.route('/users/<user_name>')
+def users(user_name):
+    # define a route for users endpoint
+    return render_template('profile.html', user_name=user_name)
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -104,8 +110,8 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/edit_user/<user_id>", methods=["GET", "POST"])
-def edit_user(user_id):
+@app.route("/edit_user/<user_name>", methods=["GET", "POST"])
+def edit_user(user_name):
     if request.method == "POST":
         submit = {
             "school_name": request.form.get("school_name"),
@@ -119,13 +125,13 @@ def edit_user(user_id):
             "items": request.form.get("items"),
             "created_by": session["user"]
         }
-        mongo.db.users.update_one({"_id": ObjectId(user_id)}, {"$set": submit})
+        mongo.db.users.update_one({"_id": ObjectId(user_name)}, {"$set": submit})
         flash("User Successfully Updated")
         return redirect(url_for("get_users"))
 
-    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+    user = mongo.db.users.find_one({"_id": ObjectId(user_name)})
     schools = mongo.db.schools.find().sort("school_name", 1)
-    return render_template("edit_user.html", user=user, schools=schools)
+    return render_template("edit_user.html", user_name=user_name, schools=schools)
 
 
 @app.route("/delete_user/<user_id>")
