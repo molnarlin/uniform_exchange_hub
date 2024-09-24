@@ -23,16 +23,10 @@ def index():
     return render_template('index.html', users=users)
 
 
-@app.route("/get_users")
+@app.route("/users")
 def get_users():
     users = list(mongo.db.users.find())
-    return render_template("user_profile.html", users=users)
-
-
-@app.route('/users/<user_name>')
-def user_profile(user_name):
-    # define a route for users endpoint
-    return render_template('user_profile.html', user_name=user_name)
+    return render_template("users.html", users=users)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -112,7 +106,7 @@ def create_profile(user_name):
                 "contact_address": request.form.get("contact_address"),
                 "event_date": request.form.get("event_date"),
                 "event_place": request.form.get("event_place"),
-                "items": request.form.get("items"),
+                "items": request.form.getlist("items"),
                 "created_by": session["user"]
             }
             mongo.db.users.update_one({"user_name": user_name}, {"$set": submit})
@@ -138,14 +132,14 @@ def edit_user(user_name):
             "event_date": request.form.get("event_date"),
             "event_place": request.form.get("event_place"),
             "items": request.form.get("items"),
-            "created_by": session["user"]
+            "created_by": session.get["user"]
         }
         mongo.db.users.update_one({"user_name": user_name}, {"$set": submit})
         flash("User Successfully Updated")
         return redirect(url_for("get_users"))
 
     user = mongo.db.users.find_one({"user_name": user_name})
-    return render_template("edit_user.html", user_name=user_name)
+    return render_template("edit_user.html", user=user)
 
 
 @app.route("/delete_user/<user_id>")

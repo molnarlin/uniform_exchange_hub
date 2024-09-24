@@ -2,58 +2,39 @@
 {% block content %}
 
 
-  <h3 class="center-align light-green-text text-darken-4">{{ get_users }}'s Profile</h3>
-
-  <div class="row card-panel grey lighten-5">
-    <form action="{{ url_for('search') }}" method="post" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m8">
-                <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                <label for="query">Search Users, Items</label>
-            </div>
-            <div class="col s12 m4">
-                <a href="{{ url_for('get_users') }}" class="red btn text-shadow">Reset</a>
-                <button type="submit" class="light-blue darken-1 btn text-shadow">
-                    <i class="fas fa-search left"></i> Search
-                </button>
-            </div>
-        </div>
-    </form>
+<div class="row">
+  <div class="col s12 m8 offset-m2">
+    <div class="card-panel">
+      <h3 class="center-align light-green-text text-darken-4">
+        {{ user_name }}'s Profile
+      </h3>
+    </div>
+  </div>
 </div>
 
-{% if users|length > 0 %}
-<ul class="collapsible">
-  {% for user in users %}
-    <li>
-      <div class="collapsible-header white-text light-blue darken-4 text-shadow">
-          <div class="col s3">
-              <i class="fas fa-caret-down"></i>
-              {% if session.user|lower == user.created_by|lower %}
-                  <a href="{{ url_for('delete_user', user_id=user._id) }}" class="btn-small green accent-4">Done</a>
-                  <a href="{{ url_for('edit_user', user_id=user._id) }}" class="btn-small light-blue lighten-1">Edit</a>
-              {% endif %}
-          </div>
-          <div class="col s9">
-              <strong>{{ user.user_name }}</strong>
-          </div>
-      </div>
-      <div class="collapsible-body">
-          <p>{{  users.school_name }}</p>
-          <p>{{  users.contact_person  }}</p>
-          <p>{{  users.contact_phone  }}</p>
-          <p>{{  users.contact_email  }}</p>
-          <p>{{  users.contact_address  }}</p>
-          <p>{{  users.event_place  }}</p>
-          <p>{{  users.event_date  }}</p>
-          <p>{{  users.items }}</p>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
-
-  {% endif %}
+<div class="row"></div>
+  <div class="col s12">
+    <ul>
+      {% for user in users %}
+        <li>
+          <strong>{{ user.user_name }}</strong><br>
+          School: {{ user.school_name }}<br>
+          Contact Person: {{ user.contact_person }}<br>
+          Phone: {{ user.contact_phone }}<br>
+          Email: {{ user.contact_email }}<br>
+          Address: {{ user.contact_address }}<br>
+          Event Date: {{ user.event_date }}<br>
+          Event Place: {{ user.event_place }}<br>
+          <h4>Items List</h4>
+          <ul>
+            {% for item in user.items %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
 {% endblock %}
