@@ -13,7 +13,7 @@
 <body>
     <!--Navbar-->
     <nav>
-      <div class="nav-wrapper green">
+      <div id="nav" class="nav-wrapper green">
         <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('search') }}">Search</a></li>
@@ -81,11 +81,25 @@
 
   <hr>
   <!--Footer-->
-  <footer class="page-footer green darken-2">
+  <footer class="page-footer green">
+    <div class="container text-lighten-5">
+      <div class="row">
+        <div class="l6 s12">
+          <h5>Contact Us:</h5>
+          <p>contact@uniform.exchange.hub</p>
+        </div>
+        <div class="l4 offset-l8 s12">
+          <h5>Links</h5>
+          <ul>
+            <li><a class="footer-link" href="#nav">Back to top</a></li>
+            <li><a class="footer-link" href="{{ url_for('index') }}">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="footer-copyright">
       <div class="container">
-        © 2024 Copyright Katalin Molnar
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      <p>Copyright Katalin Molnar © 2024</p>
       </div>
     </div>
   </footer>
