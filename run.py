@@ -115,11 +115,11 @@ def create_profile(user_name):
                 "items": request.form.get("items"),
                 "created_by": session["user"]
             }
-            mongo.db.users.update_one({"_id": ObjectId(user_name)}, {"$set": submit})
+            mongo.db.users.update_one({"user_name": user_name}, {"$set": submit})
             flash("User Successfully Created")
             return redirect(url_for("get_users"))
 
-        user = mongo.db.users.find_one({"_id": ObjectId(user_name)})
+        user = mongo.db.users.find_one({"user_name": user_name})
         return render_template("create_profile.html", user_name=session_user_name)
 
     return redirect(url_for("login"))
@@ -140,11 +140,11 @@ def edit_user(user_name):
             "items": request.form.get("items"),
             "created_by": session["user"]
         }
-        mongo.db.users.update_one({"_id": ObjectId(user_name)}, {"$set": submit})
+        mongo.db.users.update_one({"user_name": user_name}, {"$set": submit})
         flash("User Successfully Updated")
         return redirect(url_for("get_users"))
 
-    user = mongo.db.users.find_one({"_id": ObjectId(user_name)})
+    user = mongo.db.users.find_one({"user_name": user_name})
     return render_template("edit_user.html", user_name=user_name)
 
 
