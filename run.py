@@ -19,6 +19,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
+    users = list(mongo.db.users.find())
     return render_template('index.html', users=users)
 
 
@@ -29,7 +30,7 @@ def get_users():
 
 
 @app.route('/users/<user_name>')
-def users(user_name):
+def user_profile(user_name):
     # define a route for users endpoint
     return render_template('profile.html', user_name=user_name)
 
@@ -94,15 +95,15 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<user_name>", methods=["GET", "POST"])
-def profile():
+@app.route("/create_profile/<user_name>", methods=["GET", "POST"])
+def create_profile(user_name):
 
     if "user" in session:
     # grab the session user's username from db
         session_user_name = mongo.db.users.find_one(
             {"user_name": session["user"]})["user_name"]
 
-        return render_template("profile.html", user_name=session_user_name)
+        return render_template("create_profile.html", user_name=session_user_name)
 
     return redirect(url_for("login"))
 
@@ -142,46 +143,6 @@ def edit_user(user_name):
 def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
     flash("User Successfully Deleted")
-    return redirect(url_for("index"))
-
-
-@app.route("/get_schools")
-def get_schools():
-    schools = list(mongo.db.schools.find().sort("school_name", 1))
-    return render_template("schools.html", schools=schools)
-
-
-@app.route("/add_school", methods=["GET", "POST"])
-def add_school():
-    if request.method == "POST":
-        school = {
-            "school_name": request.form.get("school_name")
-        }
-        mongo.db.schools.insert_one(school)
-        flash("New School Added")
-        return redirect(url_for("get_schools"))
-
-    return render_template("index.html")
-
-
-@app.route("/edit_school/<school_id>", methods=["GET", "POST"])
-def edit_school(school_id):
-    if request.method == "POST":
-        submit = {
-            "school_name": request.form.get("school_name")
-        }
-        mongo.db.schools.update({"_id": ObjectId(school_id)}, submit)
-        flash("School Successfully Updated")
-        return redirect(url_for("get_schools"))
-
-    school = mongo.db.schools.find_one({"_id": ObjectId(school_id)})
-    return render_template("edit_schools.html", school=school)
-
-
-@app.route("/delete_school/<school_id>")
-def delete_school(school_id):
-    mongo.db.schools.remove({"_id": ObjectId(school_id)})
-    flash("School Successfully Deleted")
     return redirect(url_for("index"))
 
 
