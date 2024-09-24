@@ -26,13 +26,13 @@ def index():
 @app.route("/get_users")
 def get_users():
     users = list(mongo.db.users.find())
-    return render_template("profile.html", users=users)
+    return render_template("user_profile.html", users=users)
 
 
 @app.route('/users/<user_name>')
 def user_profile(user_name):
     # define a route for users endpoint
-    return render_template('profile.html', user_name=user_name)
+    return render_template('user_profile.html', user_name=user_name)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -62,7 +62,7 @@ def register():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("user_name").lower()
         flash("Registration Successful!")
-        return redirect(url_for("profile", user_name=session["user"]))
+        return redirect(url_for("user_profile", user_name=session["user"]))
     return render_template("register.html")
 
 
@@ -81,7 +81,7 @@ def login():
                         flash("Welcome, {}".format(
                             request.form.get("user_name")))
                         return redirect(url_for(
-                            "profile", user_name=session["user"]))
+                            "user_profile", user_name=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -96,7 +96,7 @@ def login():
 
 
 @app.route("/create_profile/<user_name>", methods=["GET", "POST"])
-def create_profile(user_name):
+def create_profile(user):
 
     if "user" in session:
     # grab the session user's username from db
