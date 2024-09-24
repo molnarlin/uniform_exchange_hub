@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     var options = {
-      defaultDate: new Date(2024, 1, 3),
-      setDefaultDate: true
+      setDefaultDate: false
     };
     var elems = document.querySelector('.datepicker');
     var instance = M.Datepicker.init(elems, options);

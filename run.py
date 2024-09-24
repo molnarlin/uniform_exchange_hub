@@ -18,10 +18,14 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+def index():
+    return render_template('index.html', users=users)
+
+
 @app.route("/get_users")
 def get_users():
     users = list(mongo.db.users.find())
-    return render_template("index.html", users=users)
+    return render_template("profile.html", users=users)
 
 
 @app.route('/users/<user_name>')
@@ -91,21 +95,12 @@ def login():
 
 
 @app.route("/profile/<user_name>", methods=["GET", "POST"])
-def profile(user_name):
+def profile():
 
     if "user" in session:
     # grab the session user's username from db
         session_user_name = mongo.db.users.find_one(
-            {"user_name": session["user"]})["user_name"],
-        session_user_name["school_name"], request.form("school_name")
-        session_user_name["contact_person"], request.form("contact_person")
-        session_user_name["contact_phone"], request.form("contact_phone")
-        session_user_name["contact_email"], request.form("contact_email")
-        session_user_name["contact_address"], request.form("contact_address")
-        session_user_name["event_place"], request.form("event_place")
-        session_user_name["event_date"], request.form("event_date")
-        session_user_name["items"], request.form("items")
-
+            {"user_name": session["user"]})["user_name"]
 
         return render_template("profile.html", user_name=session_user_name)
 
@@ -140,8 +135,7 @@ def edit_user(user_name):
         return redirect(url_for("get_users"))
 
     user = mongo.db.users.find_one({"_id": ObjectId(user_name)})
-    schools = mongo.db.schools.find().sort("school_name", 1)
-    return render_template("edit_user.html", user_name=user_name, schools=schools)
+    return render_template("edit_user.html", user_name=user_name)
 
 
 @app.route("/delete_user/<user_id>")
