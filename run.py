@@ -96,23 +96,32 @@ def login():
 
 
 @app.route("/create_profile/<user_name>", methods=["GET", "POST"])
-def create_profile(user):
+def create_profile(user_name):
 
     if "user" in session:
     # grab the session user's username from db
-        session_user_name = mongo.db.users.find_one(
-            {"user_name": session["user"]})["user_name"]
+        session_user_name = mongo.db.users.find_one({"user_name": session["user"]})["user_name"]
 
+        if request.method == "POST":
+            submit = {
+                "school_name": request.form.get("school_name"),
+                "user_name": request.form.get("user_name"),
+                "contact_person": request.form.get("contact_person"),
+                "contact_phone": request.form.get("contact_phone"),
+                "contact_email": request.form.get("contact_email"),
+                "contact_address": request.form.get("contact_address"),
+                "event_date": request.form.get("event_date"),
+                "event_place": request.form.get("event_place"),
+                "items": request.form.get("items"),
+                "created_by": session["user"]
+            }
+            mongo.db.users.update_one({"_id": ObjectId(user_name)}, {"$set": submit})
+            flash("User Successfully Created")
+            return redirect(url_for("get_users"))
+
+        user = mongo.db.users.find_one({"_id": ObjectId(user_name)})
         return render_template("create_profile.html", user_name=session_user_name)
 
-    return redirect(url_for("login"))
-
-
-@app.route("/logout")
-def logout():
-    # remove user from session cookie
-    flash("You have been logged out")
-    session.pop("user")
     return redirect(url_for("login"))
 
 
@@ -144,6 +153,13 @@ def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
     flash("User Successfully Deleted")
     return redirect(url_for("index"))
+
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":
