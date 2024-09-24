@@ -18,8 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var options = {
       setDefaultDate: false
     };
-    var elems = document.querySelector('.datepicker');
-    var instance = M.Datepicker.init(elems, options);
-    // instance.open();
-    instance.setDate(new Date());
-  });
+    var elems = document.querySelectorAll('.datepicker');
+    if (elems.length > 0) {
+      elems.forEach(function(elem) {
+          var instance = M.Datepicker.init(elem, options);
+          instance.setDate(new Date());
+      });
+    } else {
+      console.error('No element found with the class "datepicker"');
+    }
+});

@@ -6,7 +6,7 @@
   <div class="col s12 m8 offset-m2">
     <div class="card-panel">
       <h3 class="center-align light-green-text text-darken-4">
-        {{ user_name }}'s Profile
+        {{ user.user_name }}'s Profile
       </h3>
     </div>
   </div>
@@ -15,7 +15,6 @@
 <div class="row"></div>
   <div class="col s12">
     <ul>
-      {% for user in users %}
         <li>
           <strong>{{ user.user_name }}</strong><br>
           School: {{ user.school_name }}<br>
@@ -25,14 +24,9 @@
           Address: {{ user.contact_address }}<br>
           Event Date: {{ user.event_date }}<br>
           Event Place: {{ user.event_place }}<br>
-          <h4>Items List</h4>
-          <ul>
-            {% for item in user.items %}
-              <li>{{ item }}</li>
-            {% endfor %}
+          Clothes: {{ user.items }}
           </ul>
         </li>
-      {% endfor %}
     </ul>
   </div>
 </div>

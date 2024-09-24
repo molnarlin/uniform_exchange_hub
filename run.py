@@ -4,7 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
-from bson.objectid import ObjectId
+from flask_login import LoginManager, UserMixin, login_user, login_required, current_user
 if os.path.exists("env.py"):
     import env
 
@@ -15,7 +15,28 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
 
+class User(UserMixin):
+    def __init__(self, user_data):
+        self.id = user_data.get('_id')
+        self.username = user_data.get('username')
+        self.email = user_data.get('email')
+        self.school_name = user_data.get('school_name')
+        self.contact_person = user_data.get('contact_person')
+        self.contact_phone = user_data.get('contact_phone')
+        self.contact_address = user_data.get('contact_address')
+        self.event_date = user_data.get('event_date')
+        self.event_place = user_data.get('event_place')
+        self.items = user_data.get('items')
+
+@login_manager.user_loader
+def load_user(user_id):
+    user_data = mongo.db.users.find_one({'_id': user_id})
+    if user_data:
+        return User(user_data)
+    return None
 
 @app.route("/")
 def index():
@@ -24,9 +45,9 @@ def index():
 
 
 @app.route("/users")
+@login_required
 def get_users():
-    users = list(mongo.db.users.find())
-    return render_template("users.html", users=users)
+    return render_template("users.html", user=current_user)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -75,7 +96,7 @@ def login():
                         flash("Welcome, {}".format(
                             request.form.get("user_name")))
                         return redirect(url_for(
-                            "user_profile", user_name=session["user"]))
+                            "get_users", user_name=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -99,7 +120,7 @@ def create_profile(user_name):
         if request.method == "POST":
             submit = {
                 "school_name": request.form.get("school_name"),
-                "user_name": request.form.get("user_name"),
+                "user_name": user_name,
                 "contact_person": request.form.get("contact_person"),
                 "contact_phone": request.form.get("contact_phone"),
                 "contact_email": request.form.get("contact_email"),
@@ -109,11 +130,10 @@ def create_profile(user_name):
                 "items": request.form.getlist("items"),
                 "created_by": session["user"]
             }
-            mongo.db.users.update_one({"user_name": user_name}, {"$set": submit})
+            mongo.db.users.insert_one(submit)
             flash("User Successfully Created")
-            return redirect(url_for("get_users"))
+            return redirect(url_for("users", user_name=user_name))
 
-        user = mongo.db.users.find_one({"user_name": user_name})
         return render_template("create_profile.html", user_name=session_user_name)
 
     return redirect(url_for("login"))
@@ -144,7 +164,7 @@ def edit_user(user_name):
 
 @app.route("/delete_user/<user_id>")
 def delete_user(user_id):
-    mongo.db.users.remove({"_id": ObjectId(user_id)})
+    mongo.db.users.remove({"user_name": user_name})
     flash("User Successfully Deleted")
     return redirect(url_for("index"))
 
