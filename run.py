@@ -97,31 +97,28 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
+        user_name = request.form.get("user_name").lower()
+        user_password = request.form.get("user_password")
         # check if username exists in db
-        existing_user = mongo.db.users.find_one(
-            {"user_name": request.form.get("user_name").lower()})
+        existing_user = mongo.db.users.find_one({"user_name": user_name})
 
         if existing_user:
             # ensure hashed password matches user input
-            if check_password_hash(
-                    existing_user["user_password"], request.form.get("user_password")):
-                        session["user"] = request.form.get("user_name").lower()
-                        flash("Welcome, {}".format(
-                            request.form.get("user_name")))
-                        return redirect(url_for(
-                            "get_users", user_name=session["user"]))
+            if check_password_hash(existing_user["user_password"], user_password):
+                session["user"] = user_name
+                flash("Welcome, {}".format(user_name))
+                return redirect(url_for("user_profile", user_name=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
 
         else:
             # username doesn't exist
             flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
+    
+        return redirect(url_for("login"))
 
-    return render_template("user_profile.html")
-
+    return render_template("login.html")
 
 @app.route("/create_profile/<user_name>")
 @login_required
