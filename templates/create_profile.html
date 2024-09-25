@@ -5,13 +5,11 @@
   <div class="col s12 m8 offset-m2">
     <div class="card-panel">
       <h3 class="center-align light-green-text text-darken-4">
-        {{ user_name }}'s Profile
+        {{ user.user_name }}'s Profile
       </h3>
     </div>
   </div>
 </div>
-
-{% for user in users %}
 
 <div class="row">
   <form action="{{ url_for('create_profile', user_name=user.user_name) }}" method="POST">
@@ -49,14 +47,12 @@
       <textarea id="items" name="items" class="materialize-textarea"></textarea>
       <label for="items">What clothes would you like to donate?</label>
     </div>
+    <div class="row">
+      <div class="col s12 center-align">
+        <button class="btn-large black-text" type="submit">Save Profile</button>
+      </div>
+    </div>
   </form>
 </div>
 
-{% endfor %}
-
-<div class="row">
-  <div class="col s12 center-align">
-    <button class="btn-large black-text" type="submit">Save Profile</button>
-  </div>
-</div>
 {% endblock %}

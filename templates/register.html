@@ -15,12 +15,14 @@
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
             <div class="card-panel">
+                <!-- CSRF token -->
+                {{ csrf_token() }}
                 <!-- username -->
                 <div class="row">
 					<div class="input-field col s12">
                         <i class="material-icons">person</i>
 						<span><input id="user_name" name="user_name" type="text" minlength="5"
-                            maxlength="15" pattern="^[\S]{5,15}$" class="validate" required>
+                            maxlength="15" pattern="^[\S]{5,15}$" class="validate" required aria-label="username">
 						<label for="user_name">Username</label></span>
 					</div>
                 </div>
@@ -29,8 +31,17 @@
                     <div class="input-field col s12">
                         <i class="material-icons">lock</i>
                         <span><input id="user_password" name="user_password" type="password" minlength="5"
-                            maxlength="15" pattern="^[\S]{5,15}$" class="validate" required>
+                            maxlength="15" pattern="^[\S]{5,15}$" class="validate" required aria-label="password">
                         <label for="user_password">Password</label></span>
+                    </div>
+                </div>
+                <!--confirm password-->
+                <div class="row"></div>
+                    <div class="input-field col s12">
+                        <i class="material-icons">lock</i>
+                        <span><input id="confirm_password" name="confirm_password" type="password" minlength="5"
+                            maxlength="15" pattern="^[\S]{5,15}$" class="validate" required aria-label="Confirm Password">
+                        <label for="confirm_password">Confirm Password</label></span>
                     </div>
                 </div>
                 <!-- register -->

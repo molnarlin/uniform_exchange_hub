@@ -3,12 +3,15 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, current_user
 if os.path.exists("env.py"):
     import env
 
 app = Flask(__name__)
+client = MongoClient("MONGO_URI")
+db = client.uniform_hub
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
@@ -50,11 +53,21 @@ def get_users():
     return render_template("users.html", user=current_user)
 
 
-@app.route("/search", methods=["GET", "POST"])
+@app.route("/search", methods=["GET"])
 def search():
-    query = request.args.get("query") if request.method == "GET" else request.form.get("query")
-    users = list(mongo.db.users.find({"$text": {"$search": query}}))
-    return render_template("users.html", users=users)
+    query = request.args.get("query")
+    search_results = db.users.aggregate([
+        {
+            '$search': {
+                'index': 'users_information',
+                'text': {
+                    'query': query,
+                    'path': 'users_information'
+                }
+            }
+        }
+    ])
+    return render_template('users.html', users=search_results)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -107,36 +120,30 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("user_profile.html")
 
 
-@app.route("/create_profile/<user_name>", methods=["GET", "POST"])
+@app.route("/create_profile/<user_name>")
+@login_required
 def create_profile(user_name):
-
-    if "user" in session:
+    user = mongo.db.users.find_one({"user_name": user_name})
+    if "user":
     # grab the session user's username from db
-        session_user_name = mongo.db.users.find_one({"user_name": session["user"]})["user_name"]
+        return render_template("create_profile.html", user=user)
 
-        if request.method == "POST":
-            submit = {
-                "school_name": request.form.get("school_name"),
-                "user_name": user_name,
-                "contact_person": request.form.get("contact_person"),
-                "contact_phone": request.form.get("contact_phone"),
-                "contact_email": request.form.get("contact_email"),
-                "contact_address": request.form.get("contact_address"),
-                "event_date": request.form.get("event_date"),
-                "event_place": request.form.get("event_place"),
-                "items": request.form.getlist("items"),
-                "created_by": session["user"]
-            }
-            mongo.db.users.insert_one(submit)
-            flash("User Successfully Created")
-            return redirect(url_for("users", user_name=user_name))
-
-        return render_template("create_profile.html", user_name=session_user_name)
-
-    return redirect(url_for("login"))
+    else:
+        flash("User not found")
+        return redirect(url_for("index"))
+    
+@app.route("/user_profile/<user_name>")
+@login_required
+def user_profile(user_name):
+    user = mongo.db.users.find_one({"user_name": user_name})
+    if user:
+        return render_template("user_profile.html", user=user)
+    else:
+        flash("User not found")
+        return redirect(url_for("index"))
 
 
 @app.route("/edit_user/<user_name>", methods=["GET", "POST"])
@@ -163,7 +170,7 @@ def edit_user(user_name):
 
 
 @app.route("/delete_user/<user_id>")
-def delete_user(user_id):
+def delete_user(user_name):
     mongo.db.users.remove({"user_name": user_name})
     flash("User Successfully Deleted")
     return redirect(url_for("index"))

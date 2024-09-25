@@ -13,49 +13,51 @@
 {% for user in users %}
 <div class="row">
   <form action="{{ url_for('edit_user', user_name=user.user_name) }}" method="POST">
+     <!-- CSRF token -->
+     {{ csrf_token() }}
     <div class="input-field col s12">
       <label for="school_name">School Name:</label>
-      <input type="text" id="school_name" name="school_name" value="{{ user.school_name }}">
+      <input type="text" id="school_name" name="school_name" value="{{ user.school_name }}" aria-label="school name">
     </div>
     <div class="input-field col s6">
       <i class="material-icons prefix">account_circle</i>
       <label for="contact_person">Contact Person:</label>
-      <input type="text" id="contact_person" name="contact_person" value="{{ user.contact_person }}">
+      <input type="text" id="contact_person" name="contact_person" value="{{ user.contact_person }}" aria-label="contact person">
     </div>
     <div class="input-field col s6">
       <i class="material-icons prefix">phone</i>
       <label for="contact_phone">Contact Phone:</label>
-      <input type="text" id="contact_phone" name="contact_phone" value="{{ user.contact_phone }}">
+      <input type="text" id="contact_phone" name="contact_phone" value="{{ user.contact_phone }}" aria-label="contact phone">
     </div>
     <div class="input-field col s6">
       <i class="material-icons prefix">email</i>
       <label for="contact_email">Contact Email:</label>
-      <input type="email" id="contact_email" name="contact_email" value="{{ user.contact_email }}">
+      <input type="email" id="contact_email" name="contact_email" value="{{ user.contact_email }}" aria-label="contact email">
     </div>
     <div class="input-field col s6">
       <i class="material-icons prefix">home</i>
       <label for="contact_address">Contact Address:</label>
-      <input type="text" id="contact_address" name="contact_address" value="{{ user.contact_address }}">
+      <input type="text" id="contact_address" name="contact_address" value="{{ user.contact_address }}" aria-label="contact address">
     </div>
     <div class="col s12">
       <h4>Events, if you have:</h4>
       <label for="event_date">Event Date:</label>
-      <input type="date" id="event_date" name="event_date" value="{{ user.event_date }}">
+      <input type="date" id="event_date" name="event_date" value="{{ user.event_date }}" aria-label="event date">
       <label for="event_place">Event Place:</label>
-      <input type="text" id="event_place" name="event_place" value="{{ user.event_place }}">
+      <input type="text" id="event_place" name="event_place" value="{{ user.event_place }}" aria-label="event place">
     </div>
     <div class="col s12 black-text">
       <h4>What items would you like to donate?</h4>
       <label for="items">Items:</label>
-      <input type="text" id="items" name="items" value="{{ user.items }}">
+      <input type="text" id="items" name="items" value="{{ user.items }}" aria-label="cloths">
+    </div>
+    <div class="row"></div>
+      <div class="col s12 center-align">
+        <button class="btn-large black-text" type="submit">Save Changes</button>
+        <a class="waves-effect waves-light btn-large black-text" onclick="return confirm('Are you sure you want to delete your account?');">Delete account</a>
+      </div>
     </div>
   </form>
 </div>
 {% endfor %}
-<div class="row">
-  <div class="col s12 center-align">
-    <button class="btn-large black-text" type="submit">Save Changes</button>
-    <a class="waves-effect waves-light btn-large black-text">Delete account</a>
-  </div>
-</div>
 {% endblock %}

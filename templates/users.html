@@ -14,19 +14,32 @@
 
 <div class="row"></div>
   <div class="col s12">
+    <form method="GET" action="/search">
+      <div class="input-field">
+        <input id="search" type="text" name="query" required>
+        <label for="search">Search</label>
+      </div>
+      <button type="submit" class="btn">Search</button>
+    </form>
+  </div>
+</div>
+
+<div class="row"></div>
+  <div class="col s12">
     <ul>
-        <li>
-          <strong>{{ user.user_name }}</strong><br>
-          School: {{ user.school_name }}<br>
-          Contact Person: {{ user.contact_person }}<br>
-          Phone: {{ user.contact_phone }}<br>
-          Email: {{ user.contact_email }}<br>
-          Address: {{ user.contact_address }}<br>
-          Event Date: {{ user.event_date }}<br>
-          Event Place: {{ user.event_place }}<br>
-          Clothes: {{ user.items }}
-          </ul>
-        </li>
+      {% for user in users %}
+      <li>
+        <strong>{{ user.user_name }}</strong><br>
+        School: {{ user.school_name }}<br>
+        Contact Person: {{ user.contact_person }}<br>
+        Phone: {{ user.contact_phone }}<br>
+        Email: {{ user.contact_email }}<br>
+        Address: {{ user.contact_address }}<br>
+        Event Date: {{ user.event_date }}<br>
+        Event Place: {{ user.event_place }}<br>
+        Clothes: {{ user.items }}
+      </li>
+    {% endfor %}
     </ul>
   </div>
 </div>
