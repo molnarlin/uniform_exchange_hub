@@ -2,6 +2,7 @@ import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
+from bson.objectid import ObjectId
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -97,31 +98,29 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        user_name = request.form.get("user_name").lower()
-        user_password = request.form.get("user_password")
+    
         # check if username exists in db
-        existing_user = mongo.db.users.find_one({"user_name": user_name})
+        existing_user = mongo.db.users.find_one({"user_name": request.form.get("user_name").lower()})
 
         if existing_user:
             # ensure hashed password matches user input
-            if check_password_hash(existing_user["user_password"], user_password):
-                session["user"] = user_name
-                flash("Welcome, {}".format(user_name))
-                return redirect(url_for("user_profile", user_name=session["user"]))
+            if check_password_hash(existing_user["user_password"], request.form.get("user_password")):
+                session["user"] = request.form.get("user_name").lower()
+                flash("Welcome, {}".format(request.form.get("user_name")))
+                
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
 
         else:
             # username doesn't exist
             flash("Incorrect Username and/or Password")
-    
-        return redirect(url_for("login"))
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 
 @app.route("/create_profile/<user_name>")
-@login_required
 def create_profile(user_name):
     user = mongo.db.users.find_one({"user_name": user_name})
     if "user":
@@ -132,9 +131,9 @@ def create_profile(user_name):
         flash("User not found")
         return redirect(url_for("index"))
     
-@app.route("/user_profile/<user_name>")
-@login_required
-def user_profile(user_name):
+@app.route("/user_profile")
+def user_profile():
+    user_name = session["user"]
     user = mongo.db.users.find_one({"user_name": user_name})
     if user:
         return render_template("user_profile.html", user=user)
@@ -143,8 +142,8 @@ def user_profile(user_name):
         return redirect(url_for("index"))
 
 
-@app.route("/edit_user/<user_name>", methods=["GET", "POST"])
-def edit_user(user_name):
+@app.route("/edit_user/<user_id>", methods=["GET", "POST"])
+def edit_user(user_id):
     if request.method == "POST":
         submit = {
             "school_name": request.form.get("school_name"),
@@ -158,11 +157,10 @@ def edit_user(user_name):
             "items": request.form.get("items"),
             "created_by": session.get["user"]
         }
-        mongo.db.users.update_one({"user_name": user_name}, {"$set": submit})
+        mongo.db.users.update({"_id": ObjectId(user_id)}, submit)
         flash("User Successfully Updated")
-        return redirect(url_for("get_users"))
 
-    user = mongo.db.users.find_one({"user_name": user_name})
+    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
     return render_template("edit_user.html", user=user)
 
 
