@@ -12,7 +12,7 @@
 </div>
 {% for user in users %}
 <div class="row">
-  <form action="{{ url_for('edit_user', user_name=user.user_name) }}" method="POST">
+  <form action="{{ url_for('edit_user', user_id=user._id) }}" method="POST">
      <!-- CSRF token -->
      {{ csrf_token() }}
     <div class="input-field col s12">
