@@ -3,55 +3,58 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from bson.objectid import ObjectId
+from bson.errors import *
+from datetime import timedelta
 from flask_pymongo import PyMongo
-from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import LoginManager, UserMixin, login_user, login_required, current_user
 if os.path.exists("env.py"):
     import env
 
 app = Flask(__name__)
-client = MongoClient("MONGO_URI")
-db = client.uniform_hub
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
+app.permanent_session_lifetime = timedelta(minutes=10)
 
 mongo = PyMongo(app)
-login_manager = LoginManager(app)
-login_manager.login_view = 'login'
-
-class User(UserMixin):
-    def __init__(self, user_data):
-        self.id = user_data.get('_id')
-        self.username = user_data.get('username')
-        self.email = user_data.get('email')
-        self.school_name = user_data.get('school_name')
-        self.contact_person = user_data.get('contact_person')
-        self.contact_phone = user_data.get('contact_phone')
-        self.contact_address = user_data.get('contact_address')
-        self.event_date = user_data.get('event_date')
-        self.event_place = user_data.get('event_place')
-        self.items = user_data.get('items')
-
-@login_manager.user_loader
-def load_user(user_id):
-    user_data = mongo.db.users.find_one({'_id': user_id})
-    if user_data:
-        return User(user_data)
-    return None
+db = mongo.db
 
 @app.route("/")
 def index():
-    users = list(mongo.db.users.find())
-    return render_template('index.html', users=users)
+    return render_template('index.html')
+
+class User:
+    def __init__(self, user_name, contact_email, contact_person, contact_phone, contact_address, school_name, event_place, event_date, items):
+        self.user_name = user_name
+        self.contact_email = contact_email
+        self.contact_person = contact_person
+        self.contact_phone = contact_phone
+        self.contact_address = contact_address
+        self.school_name = school_name
+        self.event_place = event_place
+        self.event_date = event_date
+        self.items = items
+
+    def save(self):
+        user_data = {
+            "user_name": self.user_name,
+            "contact_email": self.contact_email,
+            "contact_person": self.contact_person,
+            "contact_phone": self.contact_phone,
+            "contact_address": self.contact_address,
+            "school_name": self.school_name,
+            "event_place": self.event_place,
+            "event_date": self.event_date,
+            "items": self.items
+        }
+        db.users.insert_one(user_data)
 
 
 @app.route("/users")
-@login_required
 def get_users():
-    return render_template("users.html", user=current_user)
+    users = mongo.db.users.find()
+    return render_template("users.html", users=users)
 
 
 @app.route("/search", methods=["GET"])
@@ -75,11 +78,11 @@ def search():
 def register():
     if request.method == "POST":
         # check if username already exists in db
-        existing_user = mongo.db.users.find_one(
+        existing_user_username = mongo.db.users.find_one(
             {"user_name": request.form.get("user_name").lower()})
-
-        if existing_user:
-            flash("Username already exists")
+        existing_user_email = mongo.db.users.find_one({"contact_email": request.form.get("contact_email").lower()})
+        if existing_user_username or existing_user_email:
+            flash("Username or email address already exists")
             return redirect(url_for("register"))
 
         register = {
@@ -98,6 +101,7 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
+        session.permanent  = True
     
         # check if username exists in db
         existing_user = mongo.db.users.find_one({"user_name": request.form.get("user_name").lower()})
@@ -131,33 +135,76 @@ def create_profile(user_name):
         flash("User not found")
         return redirect(url_for("index"))
     
-@app.route("/user_profile")
+@app.route("/user_profile", methods=["GET", "POST"])
 def user_profile():
     user_name = session["user"]
     user = mongo.db.users.find_one({"user_name": user_name})
     if user:
+        if request.method == "POST":
+            contact_email = request.form["contact_email"]
+            contact_person = request.form["contact_person"]
+            contact_phone = request.form["contact_phone"]
+            contact_address = request.form["contact_address"]
+            school_name = request.form["school_name"]
+            event_place = request.form["event_place"]
+            event_date = request.form["event_date"]
+            items = request.form["items"]
+            session["contact_email"] = contact_email
+            mongo.db.users.update_one({"user_name": user_name}, {
+                "$set": {
+                    "contact_email": contact_email,
+                    "contact_person": contact_person,
+                    "contact_phone": contact_phone,
+                    "contact_address": contact_address,
+                    "school_name": school_name,
+                    "event_place": event_place,
+                    "event_date": event_date,
+                    "items": items
+                }
+            })
+            flash("Data was saved!")
+        else:
+            if "contact_email" in session:
+                contact_email = session["contact_email"]
         return render_template("user_profile.html", user=user)
     else:
         flash("User not found")
-        return redirect(url_for("index"))
+        return redirect(url_for("login"))
 
 
 @app.route("/edit_user/<user_id>", methods=["GET", "POST"])
 def edit_user(user_id):
+    try:
+        # Try to convert user_id to ObjectId
+        user_id = ObjectId(user_id)
+        user_to_edit = mongo.db.users.find_one({"_id": user_id})
+    except bson.errors.InvalidId:
+        # If user_id is not a valid ObjectId, query by user_name
+        user_to_edit = mongo.db.users.find_one({"user_name": user_id})
+
+    if user_to_edit:
+        # User found, proceed with editing
+        pass
+    else:
+        # User not found
+        pass
+    user_to_edit = mongo.db.users.find_one({"_id": ObjectId(user_id)})
     if request.method == "POST":
         submit = {
-            "school_name": request.form.get("school_name"),
-            "user_name": request.form.get("user_name"),
-            "contact_person": request.form.get("contact_person"),
-            "contact_phone": request.form.get("contact_phone"),
-            "contact_email": request.form.get("contact_email"),
-            "contact_address": request.form.get("contact_address"),
-            "event_date": request.form.get("event_date"),
-            "event_place": request.form.get("event_place"),
-            "items": request.form.get("items"),
-            "created_by": session.get["user"]
+            "$set": {
+                "school_name": request.form.get("school_name"),
+                "user_name": request.form.get("user_name"),
+                "contact_person": request.form.get("contact_person"),
+                "contact_phone": request.form.get("contact_phone"),
+                "contact_email": request.form.get("contact_email"),
+                "contact_address": request.form.get("contact_address"),
+                "event_date": request.form.get("event_date"),
+                "event_place": request.form.get("event_place"),
+                "items": request.form.get("items"),
+                "created_by": session.get["user"]
+            }
         }
-        mongo.db.users.update({"_id": ObjectId(user_id)}, submit)
+        mongo.db.users.update_one({"_id": ObjectId(user_id)}, submit)
         flash("User Successfully Updated")
 
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
@@ -165,16 +212,21 @@ def edit_user(user_id):
 
 
 @app.route("/delete_user/<user_id>")
-def delete_user(user_name):
-    mongo.db.users.remove({"user_name": user_name})
+def delete_user(user_id):
+    mongo.db.users.delete_one({"_id": ObjectId(user_id)})
     flash("User Successfully Deleted")
     return redirect(url_for("index"))
 
 @app.route("/logout")
 def logout():
     # remove user from session cookie
+    if "user" in session:
+        user = session["user"]
+        flash("You have been logged out!", "info")
+    session.pop("user", None)
+    session.pop("email", None)
+    return redirect(url_for("login"))
     flash("You have been logged out")
-    session.pop("user")
     return redirect(url_for("login"))
 
 
