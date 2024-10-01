@@ -13,8 +13,6 @@
 {% for user in users %}
 <div class="row">
   <form action="{{ url_for('edit_user', user_id=user._id) }}" method="POST">
-     <!-- CSRF token -->
-     {{ csrf_token() }}
     <div class="input-field col s12">
       <label for="school_name">School Name:</label>
       <input type="text" id="school_name" name="school_name" value="{{ user.school_name }}" aria-label="school name">
