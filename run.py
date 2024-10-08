@@ -224,9 +224,6 @@ def logout():
         user = session["user"]
         flash("You have been logged out!", "info")
     session.pop("user", None)
-    session.pop("email", None)
-    return redirect(url_for("login"))
-    flash("You have been logged out")
     return redirect(url_for("login"))
 
 
