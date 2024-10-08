@@ -174,13 +174,6 @@ def user_profile():
 
 @app.route("/edit_user/<user_id>", methods=["GET", "POST"])
 def edit_user(user_id):
-    try:
-        # Try to convert user_id to ObjectId
-        user_id = ObjectId(user_id)
-        user_to_edit = mongo.db.users.find_one({"_id": user_id})
-    except bson.errors.InvalidId:
-        # If user_id is not a valid ObjectId, query by user_name
-        user_to_edit = mongo.db.users.find_one({"user_name": user_id})
 
     if user_to_edit:
         # User found, proceed with editing
