@@ -111,6 +111,9 @@ def login():
             if check_password_hash(existing_user["user_password"], request.form.get("user_password")):
                 session["user"] = request.form.get("user_name").lower()
                 flash("Welcome, {}".format(request.form.get("user_name")))
+
+                # Redirect to the user's profile page
+                return redirect(url_for("user_profile", user_name=session["user"]))
                 
             else:
                 # invalid password match
@@ -179,7 +182,7 @@ def logout():
         user = session["user"]
         flash("You have been logged out!", "info")
     session.pop("user", None)
-    return redirect(url_for("login"))
+    return redirect(url_for("index"))
 
 
 if __name__ == "__main__":
