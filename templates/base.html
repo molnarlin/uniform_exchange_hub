@@ -18,7 +18,6 @@
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('search') }}">Search</a></li>
           {% if session.user %}
-            <li><a href="{{ url_for('create_profile', user_name=session['user']) }}">Create Profile</a></li>
             <li><a href="{{ url_for('user_profile', user_name=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('edit_user', user_name=session['user']) }}">Edit Profile</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
@@ -33,7 +32,6 @@
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('search') }}">Search</a></li>
           {% if session.user %}
-            <li><a href="{{ url_for('create_profile', user_name=session['user']) }}">Create Profile</a></li>
             <li><a href="{{ url_for('user_profile', user_name=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('edit_user', user_name=session['user']) }}">Edit Profile</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>

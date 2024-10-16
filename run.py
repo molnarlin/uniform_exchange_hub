@@ -124,16 +124,6 @@ def login():
 
     return render_template("login.html")
 
-@app.route("/create_profile/<user_name>")
-def create_profile(user_name):
-    user = mongo.db.users.find_one({"user_name": user_name})
-    if "user":
-    # grab the session user's username from db
-        return render_template("create_profile.html", user=user)
-
-    else:
-        flash("User not found")
-        return redirect(url_for("index"))
     
 @app.route("/user_profile/<user_name>")
 def user_profile(user_name):
