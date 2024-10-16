@@ -38,14 +38,7 @@
   <input type="text" id="event_place" name="event_place" value="{{ user.event_place }}" required><br>
 
   <label for="items">Items:</label>
-  <textarea id="items" name="items" required>
-      {% for item in user.items %}
-          {{ item }}
-          {% if not loop.last %}
-              ,
-          {% endif %}
-      {% endfor %}
-  </textarea><br>
+  <textarea id="items" name="items" required>{{ user.items }}</textarea><br>
 
   <label for="created_by">Created By:</label>
   <input type="text" id="created_by" name="created_by" value="{{ user.created_by }}" readonly><br>

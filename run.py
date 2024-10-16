@@ -193,7 +193,7 @@ def edit_user(user_name):
                 "contact_address": request.form.get("contact_address"),
                 "event_date": request.form.get("event_date"),
                 "event_place": request.form.get("event_place"),
-                "items": request.form.getlist("items[]"),
+                "items": request.form.getlist("items"),
                 "created_by": session.get["user"]
             }
         }
