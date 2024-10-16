@@ -141,15 +141,15 @@ def user_profile():
     user = mongo.db.users.find_one({"user_name": user_name})
     if user:
         if request.method == "POST":
-            contact_email = request.form["contact_email"]
-            contact_person = request.form["contact_person"]
-            contact_phone = request.form["contact_phone"]
-            contact_address = request.form["contact_address"]
-            school_name = request.form["school_name"]
-            event_place = request.form["event_place"]
-            event_date = request.form["event_date"]
-            items = request.form["items"]
-            session["contact_email"] = contact_email
+            contact_email = request.form.get["contact_email"]
+            contact_person = request.form.get["contact_person"]
+            contact_phone = request.form.get["contact_phone"]
+            contact_address = request.form.get["contact_address"]
+            school_name = request.form.get["school_name"]
+            event_place = request.form.get["event_place"]
+            event_date = request.form.get["event_date"]
+            items = request.form.get["items"]
+            session["user_name"] = user_name
             mongo.db.users.update_one({"user_name": user_name}, {
                 "$set": {
                     "contact_email": contact_email,
@@ -164,24 +164,24 @@ def user_profile():
             })
             flash("Data was saved!")
         else:
-            if "contact_email" in session:
-                contact_email = session["contact_email"]
+            if "user_name" in session:
+                user_name = session["user_name"]
         return render_template("user_profile.html", user=user)
     else:
         flash("User not found")
         return redirect(url_for("login"))
 
 
-@app.route("/edit_user/<user_id>", methods=["GET", "POST"])
-def edit_user(user_id):
+@app.route("/edit_user/<user_name>", methods=["GET", "POST"])
+def edit_user(user_name):
 
-    if user_to_edit:
-        # User found, proceed with editing
-        pass
-    else:
-        # User not found
-        pass
-    user_to_edit = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+    # Retrieve the user from the database
+    user_to_edit = mongo.db.users.find_one({"user_name": user_name})
+
+    if user_to_edit is None:
+        flash("User  not found")
+        return redirect(url_for("index"))
+   
     if request.method == "POST":
         submit = {
             "$set": {
@@ -193,20 +193,19 @@ def edit_user(user_id):
                 "contact_address": request.form.get("contact_address"),
                 "event_date": request.form.get("event_date"),
                 "event_place": request.form.get("event_place"),
-                "items": request.form.get("items"),
+                "items": request.form.getlist("items[]"),
                 "created_by": session.get["user"]
             }
         }
-        mongo.db.users.update_one({"_id": ObjectId(user_id)}, submit)
+        mongo.db.users.update_one({"user_name": user_name}, submit)
         flash("User Successfully Updated")
 
-    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
-    return render_template("edit_user.html", user=user)
+    return render_template("edit_user.html", user=user_to_edit)
 
 
-@app.route("/delete_user/<user_id>")
-def delete_user(user_id):
-    mongo.db.users.delete_one({"_id": ObjectId(user_id)})
+@app.route("/delete_user/<user_name>")
+def delete_user(user_name):
+    mongo.db.users.delete_one({"user_name": user_name})
     flash("User Successfully Deleted")
     return redirect(url_for("index"))
 

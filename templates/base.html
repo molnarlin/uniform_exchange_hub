@@ -20,7 +20,7 @@
           {% if session.user %}
             <li><a href="{{ url_for('create_profile', user_name=session['user']) }}">Create Profile</a></li>
             <li><a href="{{ url_for('user_profile', user_name=session['user']) }}">Profile</a></li>
-            <li><a href="{{ url_for('edit_user', user_id=session['user']) }}">Edit Profile</a></li>
+            <li><a href="{{ url_for('edit_user', user_name=session['user']) }}">Edit Profile</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           {% else %}
             <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -35,7 +35,7 @@
           {% if session.user %}
             <li><a href="{{ url_for('create_profile', user_name=session['user']) }}">Create Profile</a></li>
             <li><a href="{{ url_for('user_profile', user_name=session['user']) }}">Profile</a></li>
-            <li><a href="{{ url_for('edit_user', user_id=session['user']) }}">Edit Profile</a></li>
+            <li><a href="{{ url_for('edit_user', user_name=session['user']) }}">Edit Profile</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           {% else %}
             <li><a href="{{ url_for('register') }}">Register</a></li>
