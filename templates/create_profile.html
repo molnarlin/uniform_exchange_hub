@@ -2,16 +2,6 @@
 {% block content %}
 
 <div class="row">
-  <div class="col s12 m8 offset-m2">
-    <div class="card-panel">
-      <h3 class="center-align light-green-text text-darken-4">
-        {{ user_name }}'s Profile
-      </h3>
-    </div>
-  </div>
-</div>
-
-<div class="row">
   <form action="{{ url_for('create_profile', user_name=user.user_name) }}" method="POST">
     <div class="input-field col s12">
       <textarea id="textarea1" name="school_name" class="materialize-textarea"></textarea>
