@@ -135,42 +135,15 @@ def create_profile(user_name):
         flash("User not found")
         return redirect(url_for("index"))
     
-@app.route("/user_profile", methods=["GET", "POST"])
-def user_profile():
+@app.route("/user_profile/<user_name>")
+def user_profile(user_name):
     user_name = session["user"]
     user = mongo.db.users.find_one({"user_name": user_name})
-    if user:
-        if request.method == "POST":
-            contact_email = request.form.get["contact_email"]
-            contact_person = request.form.get["contact_person"]
-            contact_phone = request.form.get["contact_phone"]
-            contact_address = request.form.get["contact_address"]
-            school_name = request.form.get["school_name"]
-            event_place = request.form.get["event_place"]
-            event_date = request.form.get["event_date"]
-            items = request.form.get["items"]
-            session["user_name"] = user_name
-            mongo.db.users.update_one({"user_name": user_name}, {
-                "$set": {
-                    "contact_email": contact_email,
-                    "contact_person": contact_person,
-                    "contact_phone": contact_phone,
-                    "contact_address": contact_address,
-                    "school_name": school_name,
-                    "event_place": event_place,
-                    "event_date": event_date,
-                    "items": items
-                }
-            })
-            flash("Data was saved!")
-        else:
-            if "user_name" in session:
-                user_name = session["user_name"]
-        return render_template("user_profile.html", user=user)
-    else:
-        flash("User not found")
-        return redirect(url_for("login"))
-
+    if user is None:
+            flash("User  not found")
+            return redirect(url_for("index"))
+    return render_template("user_profile.html", user=user)
+               
 
 @app.route("/edit_user/<user_name>", methods=["GET", "POST"])
 def edit_user(user_name):
