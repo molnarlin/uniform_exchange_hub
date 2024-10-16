@@ -57,21 +57,13 @@ def get_users():
     return render_template("users.html", users=users)
 
 
-@app.route("/search", methods=["GET"])
+@app.route("/search", methods=["GET", "POST"])
 def search():
-    query = request.args.get("query")
-    search_results = db.users.aggregate([
-        {
-            '$search': {
-                'index': 'users_information',
-                'text': {
-                    'query': query,
-                    'path': 'users_information'
-                }
-            }
-        }
-    ])
-    return render_template('users.html', users=search_results)
+    if request.method == "POST":
+        search_query = request.form.get("search_query")
+        results = mongo.db.users.find({"$or": [{"school_name": {"$regex": search_query, "$options": "i"}}, {"items": {"$regex": search_query, "$options": "i"}}]})
+        return render_template("search_result.html", results=results, search_query=search_query)
+    return render_template("search.html")
 
 
 @app.route("/register", methods=["GET", "POST"])

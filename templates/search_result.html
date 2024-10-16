@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Search Results for "{{ search_query }}"</h1>
+
+<ul>
+    {% for result in results %}
+        <li>
+            <h2>School Name: {{ result.school_name }}</h2>
+            <p>Items: {{ result.items | join(', ') }}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}
