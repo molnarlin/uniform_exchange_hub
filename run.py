@@ -2,11 +2,10 @@ import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from bson.objectid import ObjectId
-from bson.errors import *
 from datetime import timedelta
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
+
 if os.path.exists("env.py"):
     import env
 
@@ -18,38 +17,23 @@ app.secret_key = os.environ.get("SECRET_KEY")
 app.permanent_session_lifetime = timedelta(minutes=10)
 
 mongo = PyMongo(app)
-db = mongo.db
 
 @app.route("/")
 def index():
     return render_template('index.html')
 
-class User:
-    def __init__(self, user_name, contact_email, contact_person, contact_phone, contact_address, school_name, event_place, event_date, items):
-        self.user_name = user_name
-        self.contact_email = contact_email
-        self.contact_person = contact_person
-        self.contact_phone = contact_phone
-        self.contact_address = contact_address
-        self.school_name = school_name
-        self.event_place = event_place
-        self.event_date = event_date
-        self.items = items
-
-    def save(self):
-        user_data = {
-            "user_name": self.user_name,
-            "contact_email": self.contact_email,
-            "contact_person": self.contact_person,
-            "contact_phone": self.contact_phone,
-            "contact_address": self.contact_address,
-            "school_name": self.school_name,
-            "event_place": self.event_place,
-            "event_date": self.event_date,
-            "items": self.items
-        }
-        db.users.insert_one(user_data)
-
+def get_user_data(form):
+    return {
+        "user_name": form.get("user_name").lower(),
+        "contact_email": form.get("contact_email").lower(),
+        "contact_person": form.get("contact_person"),
+        "contact_phone": form.get("contact_phone"),
+        "contact_address": form.get("contact_address"),
+        "school_name": form.get("school_name"),
+        "event_place": form.get("event_place"),
+        "event_date": form.get("event_date"),
+        "items": form.getlist("items")
+    }
 
 @app.route("/users")
 def get_users():
@@ -69,60 +53,43 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # check if username already exists in db
-        existing_user_username = mongo.db.users.find_one(
-            {"user_name": request.form.get("user_name").lower()})
-        existing_user_email = mongo.db.users.find_one({"contact_email": request.form.get("contact_email").lower()})
-        if existing_user_username or existing_user_email:
+        username = request.form.get("user_name").lower()
+        email = request.form.get("contact_email").lower()
+
+        if mongo.db.users.find_one({"user_name": username}) or mongo.db.users.find_one({"contact_email": email}):
             flash("Username or email address already exists")
             return redirect(url_for("register"))
-
-        register = {
-            "user_name": request.form.get("user_name").lower(),
+        mongo.db.users.insert_one({
+            "user_name": username,
             "user_password": generate_password_hash(request.form.get("user_password"))
-        }
-        mongo.db.users.insert_one(register)
+        })
 
-        # put the new user into 'session' cookie
-        session["user"] = request.form.get("user_name").lower()
+        session["user"] = username
         flash("Registration Successful!")
         return redirect(url_for("user_profile", user_name=session["user"]))
     return render_template("register.html")
-
+        
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         session.permanent  = True
+        username = request.form.get("user_name").lower()
+        user = mongo.db.users.find_one({"user_name": username})
     
-        # check if username exists in db
-        existing_user = mongo.db.users.find_one({"user_name": request.form.get("user_name").lower()})
-
-        if existing_user:
-            # ensure hashed password matches user input
-            if check_password_hash(existing_user["user_password"], request.form.get("user_password")):
-                session["user"] = request.form.get("user_name").lower()
-                flash("Welcome, {}".format(request.form.get("user_name")))
-
-                # Redirect to the user's profile page
-                return redirect(url_for("user_profile", user_name=session["user"]))
-                
-            else:
-                # invalid password match
-                flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
-
-        else:
-            # username doesn't exist
-            flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
+        if user and check_password_hash(user["user_password"], request.form.get("user_password")):
+            session["user"] = username
+            flash(f"Welcome, {username}")
+            return redirect(url_for("user_profile", user_name=session["user"]))
+        
+        flash("Incorrect Username and/or Password")
+        return redirect(url_for("login"))
 
     return render_template("login.html")
 
     
 @app.route("/user_profile/<user_name>")
 def user_profile(user_name):
-    user_name = session["user"]
     user = mongo.db.users.find_one({"user_name": user_name})
     if user is None:
             flash("User  not found")
@@ -141,22 +108,10 @@ def edit_user(user_name):
         return redirect(url_for("index"))
    
     if request.method == "POST":
-        submit = {
-            "$set": {
-                "school_name": request.form.get("school_name"),
-                "user_name": request.form.get("user_name"),
-                "contact_person": request.form.get("contact_person"),
-                "contact_phone": request.form.get("contact_phone"),
-                "contact_email": request.form.get("contact_email"),
-                "contact_address": request.form.get("contact_address"),
-                "event_date": request.form.get("event_date"),
-                "event_place": request.form.get("event_place"),
-                "items": request.form.getlist("items"),
-                "created_by": session.get["user"]
-            }
-        }
-        mongo.db.users.update_one({"user_name": user_name}, submit)
-        flash("User Successfully Updated")
+        mongo.db.users.update_one({"user_name": user_name}, {
+            "$set": get_user_data(request.form)
+        })
+        flash("User  Successfully Updated")
 
     return render_template("edit_user.html", user=user_to_edit)
 
@@ -170,12 +125,9 @@ def delete_user(user_name):
 @app.route("/logout")
 def logout():
     # remove user from session cookie
-    if "user" in session:
-        user = session["user"]
-        flash("You have been logged out!", "info")
     session.pop("user", None)
+    flash("You have been logged out!", "info")
     return redirect(url_for("index"))
-
 
 if __name__ == "__main__":
     app.run(
