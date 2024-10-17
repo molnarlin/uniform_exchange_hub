@@ -30,10 +30,11 @@
   <label for="items">Items:</label>
   <textarea id="items" name="items" required>{{ user.items }}</textarea><br>
 
-  <button type="submit">Update User</button>
+  <button type="submit" class="waves-effect waves-light btn-large">Update User</button>
+
+  <a href="{{ url_for('index') }}" class="waves-effect waves-light btn-large">Back to Home</a>
 </form>
 
 </div>
 
-<a href="{{ url_for('index') }}">Back to Home</a>
 {% endblock %}

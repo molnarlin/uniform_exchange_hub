@@ -40,3 +40,8 @@ div {
 .footer-link{
     color: wheat;
 }
+
+#delete-button{
+    color: red;
+    font-weight: bold;
+}
