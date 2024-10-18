@@ -63,14 +63,15 @@ I used Balsamiq to create my wireframes. There are more pages, you can chack the
 * [Register Page](static/images/Register%20Page.pdf)
 * [Profile Page](static/images/Profile%20Page.pdf)
 * [Edit Profile Page]()
+
 I modified my wireframe a couple of times; this is the latest version. This wireframe helped me to position things and organize my content.
 ## 6. Technologies used
 * I used HTML to create the layout and the basic structure for the website.
 * Materialize CSS to style the website.
-* Flask (Python)
-* JavaScript
-* MongoDB
-* Jinja
+* Flask micro framework to build the functionality of this website.
+* JavaScript to help with modals, date picker, and collapsibles.
+* MongoDB to store user's data.
+* Jinja to help with the interactivity for dynamic website. Works really well with Flask.
 * I used Balsamiq for my wireframe, so I could think about the structure of my website, size the features, and see how things can work/function.
 * I used git for version control.
 * I used GitHub to save my repository and deploy my project online.
