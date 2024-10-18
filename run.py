@@ -54,10 +54,9 @@ def search():
 def register():
     if request.method == "POST":
         username = request.form.get("user_name").lower()
-        email = request.form.get("contact_email").lower()
-
-        if mongo.db.users.find_one({"user_name": username}) or mongo.db.users.find_one({"contact_email": email}):
-            flash("Username or email address already exists")
+        
+        if mongo.db.users.find_one({"user_name": username}):
+            flash("Username already exists")
             return redirect(url_for("register"))
         mongo.db.users.insert_one({
             "user_name": username,
