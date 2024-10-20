@@ -121,6 +121,42 @@ def delete_user(user_name):
     flash("User Successfully Deleted")
     return redirect(url_for("index"))
 
+@app.route('/add_item', methods=['GET', 'POST'])
+def add_item():
+    if request.method == 'POST':
+        # Handle form submission and add item to the database
+        # Extract data from form fields
+        school_name = request.form['school_name']
+        product_name = request.form['product_name']
+        product_size = request.form['product_size']
+        product_colour = request.form['product_colour']
+        # Save to the database logic goes here
+        return redirect(url_for('index'))  # Redirect to home page or wherever you want
+
+    return render_template('add_item.html')
+
+
+@app.route('/items')
+def items():
+    # Fetch the items for the logged-in user
+    products = mongo.db.products.find({'user_id': session['user_id']})
+    return render_template('items.html', products=products)
+
+@app.route('/delete_item/<item_id>', methods=['POST'])
+def delete_item(item_id):
+    # Delete the specified item
+    mongo.db.products.delete_one({'_id': ObjectId(item_id)})
+    return redirect(url_for('items'))
+
+@app.route('/edit_item/<item_id>', methods=['GET', 'POST'])
+def edit_item(item_id):
+    # Edit the specified item
+    product = mongo.db.products.find_one({'_id': ObjectId(item_id)})
+    if request.method == 'POST':
+        # Update item logic here
+        return redirect(url_for('items'))
+    return render_template('edit_item.html', product=product)
+
 @app.route("/logout")
 def logout():
     # remove user from session cookie
