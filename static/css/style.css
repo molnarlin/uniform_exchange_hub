@@ -49,3 +49,7 @@ div {
     color: red;
     font-weight: bold;
 }
+
+label{
+    align-items: left;
+}

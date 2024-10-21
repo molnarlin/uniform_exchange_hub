@@ -8,18 +8,22 @@
 
     <div id="productFields">
         <div class="productField">
-
-            <label for="school_name">School Name:</label>
-            <input type="text" id="school_name" name="school_name" value="{{ products.school_name }}" required><br>
-
-            <label for="items">Item's name:</label>
-            <input type="text" id="product_name" name="product_name" required value="{{ products.product_name }}"><br>
-
-            <label for="items">Item's size:</label>
-            <input type="text" id="product_size" name="product_size" required value="{{ products.product_size }}"><br>
-
-            <label for="items">Item's colour:</label>
-            <input type="text" id="product_colour" name="product_colour" required value="{{ products.product_colour }}"><br>
+            <div class="input-field col s12">
+                <label for="school_name">School Name:</label>
+                <input type="text" id="school_name" name="school_name" value="{{ products.school_name }}" required>
+            </div>
+            <div class="input-field col s12">
+                <label for="items">Item's name:</label>
+                <input type="text" id="product_name" name="product_name" required value="{{ products.product_name }}">
+            </div>
+            <div class="input-field col s12">
+                <label for="items">Item's size:</label>
+                <input type="text" id="product_size" name="product_size" required value="{{ products.product_size }}">
+            </div>
+            <div class="input-field col s12">
+                <label for="items">Item's colour:</label>
+                <input type="text" id="product_colour" name="product_colour" required value="{{ products.product_colour }}">
+            </div>
         </div>
     </div>
     <button type="button" class="waves-effect waves-light btn-large" id="addMoreBtn">Add more</button>
