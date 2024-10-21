@@ -10,19 +10,19 @@
         <div class="productField">
             <div class="input-field col s12">
                 <label for="school_name">School Name:</label>
-                <input type="text" id="school_name" name="school_name" value="{{ products.school_name }}" required>
+                <input type="text" id="school_name" name="school_name" value="{{ products.school_name }}" data-length="120" required>
             </div>
             <div class="input-field col s12">
                 <label for="items">Item's name:</label>
-                <input type="text" id="product_name" name="product_name" required value="{{ products.product_name }}">
+                <input type="text" id="product_name" name="product_name" data-length="20" required value="{{ products.product_name }}">
             </div>
             <div class="input-field col s12">
                 <label for="items">Item's size:</label>
-                <input type="text" id="product_size" name="product_size" required value="{{ products.product_size }}">
+                <input type="text" id="product_size" name="product_size" data-length="20" required value="{{ products.product_size }}">
             </div>
             <div class="input-field col s12">
                 <label for="items">Item's colour:</label>
-                <input type="text" id="product_colour" name="product_colour" required value="{{ products.product_colour }}">
+                <input type="text" id="product_colour" name="product_colour" data-length="20" required value="{{ products.product_colour }}">
             </div>
         </div>
     </div>
