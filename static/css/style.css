@@ -25,6 +25,10 @@ body {
     height: 35%;
 }
 
+#registering{
+    height: 80vh;
+}
+
 div {
     text-align: justify;
   }

@@ -137,17 +137,17 @@ def add_item():
     return render_template('add_item.html')
 
 
-@app.route('/items')
-def items():
+@app.route('/items_listing')
+def items_listing():
     # Fetch the items for the logged-in user
     products = mongo.db.products.find({'user_id': session['user_id']})
-    return render_template('items.html', products=products)
+    return render_template('items_listing.html', products=products)
 
 @app.route('/delete_item/<item_id>', methods=['POST'])
 def delete_item(item_id):
     # Delete the specified item
     mongo.db.products.delete_one({'_id': ObjectId(item_id)})
-    return redirect(url_for('items'))
+    return redirect(url_for('items_listing'))
 
 @app.route('/edit_item/<item_id>', methods=['GET', 'POST'])
 def edit_item(item_id):
@@ -155,7 +155,7 @@ def edit_item(item_id):
     product = mongo.db.products.find_one({'_id': ObjectId(item_id)})
     if request.method == 'POST':
         # Update item logic here
-        return redirect(url_for('items'))
+        return redirect(url_for('items_listing'))
     return render_template('edit_item.html', product=product)
 
 @app.route("/logout")
