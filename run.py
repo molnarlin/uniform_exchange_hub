@@ -101,6 +101,12 @@ def login():
     
 @app.route("/user_profile/<user_name>")
 def user_profile(user_name):
+    # Check if user is in session
+    if "user" not in session:
+        flash("You need to log in first")
+        return redirect(url_for("login"))
+    
+    # Find the user in the database
     user = mongo.db.users.find_one({"user_name": user_name})
     if user is None:
             flash("User  not found")
@@ -110,6 +116,10 @@ def user_profile(user_name):
 
 @app.route("/edit_user/<user_name>", methods=["GET", "POST"])
 def edit_user(user_name):
+     # Check if user is in session
+    if "user" not in session:
+        flash("You need to log in first")
+        return redirect(url_for("login"))
 
     # Retrieve the user from the database
     user_to_edit = mongo.db.users.find_one({"user_name": user_name})
@@ -138,6 +148,11 @@ def delete_user(user_name):
 
 @app.route('/add_item', methods=['GET', 'POST'])
 def add_item():
+     # Check if user is in session
+    if "user" not in session:
+        flash("You need to log in first")
+        return redirect(url_for("login"))
+    
     if request.method == 'POST':
         # Handle form submission and add item to the database
         # Extract data from form fields
@@ -164,6 +179,10 @@ def add_item():
 
 @app.route('/items_listing')
 def items_listing():
+    # Check if user is in session
+    if "user" not in session:
+        flash("You need to log in first")
+        return redirect(url_for("login"))
     # Fetch the items for the logged-in user
     products = mongo.db.products.find({'user_id': session['user_id']})
     return render_template('items_listing.html', products=products)
@@ -176,6 +195,10 @@ def delete_item(item_id):
 
 @app.route('/edit_item/<item_id>', methods=['GET', 'POST'])
 def edit_item(item_id):
+    # Check if user is in session
+    if "user" not in session:
+        flash("You need to log in first")
+        return redirect(url_for("login"))
     # Edit the specified item
     product = mongo.db.products.find_one({'_id': ObjectId(item_id)})
     if request.method == 'POST':
