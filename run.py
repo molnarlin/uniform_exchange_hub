@@ -116,8 +116,11 @@ def edit_user(user_name):
     return render_template("edit_user.html", user=user_to_edit)
 
 
-@app.route("/delete_user/<user_name>")
+@app.route("/delete_user/<user_name>", methods=["GET", "POST"])
 def delete_user(user_name):
+     # Remove user from the session
+    session.pop("user", None)
+    # Delete user from the database
     mongo.db.users.delete_one({"user_name": user_name})
     flash("User Successfully Deleted")
     return redirect(url_for("index"))
