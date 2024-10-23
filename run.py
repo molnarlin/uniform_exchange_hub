@@ -33,13 +33,24 @@ def get_user_data(form):
         "school_name": form.get("school_name"),
         "event_place": form.get("event_place"),
         "event_date": form.get("event_date"),
-        "items": form.getlist("items")
+    }
+def get_item_data(form):
+    return{
+        "product_name": form.get("product_name"),
+        "school_name": form.get("school_name"),
+        "product_size": form.get("product_size"),
+        "product_colour": form.get("product_colour")
     }
 
 @app.route("/users")
 def get_users():
     users = mongo.db.users.find()
     return render_template("users.html", users=users)
+
+@app.route("/items")
+def get_items():
+    items = mongo.db.products.find()
+    return render_template("items.html", items=items)
 
 
 @app.route("/search", methods=["GET", "POST"])

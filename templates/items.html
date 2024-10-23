@@ -27,16 +27,13 @@
 <div class="row"></div>
   <div class="col s12">
     <ul>
-      {% for user in users %}
+      {% for product in products %}
       <li>
-        <strong>{{ user.user_name }}</strong><br>
-        School: {{ user.school_name }}<br>
-        Contact Person: {{ user.contact_person }}<br>
-        Phone: {{ user.contact_phone }}<br>
-        Email: {{ user.contact_email }}<br>
-        Address: {{ user.contact_address }}<br>
-        Event Date: {{ user.event_date }}<br>
-        Event Place: {{ user.event_place }}<br>
+        <strong>{{ product.user_name }}</strong><br>
+        School: {{ product.school_name }}<br>
+        Item's name: {{ product.product_name}}
+        Size: {{ product.product_size }}<br>
+        Colour: {{ product.product_colour }}<br>
       </li>
     {% endfor %}
     </ul>
