@@ -163,7 +163,6 @@ def add_item():
 
         # Save to the database logic goes here
         product = {
-            'user_id': session['user_id'],  # Assuming you have user_id in session
             'school_name': school_name,
             'product_name': product_name,
             'product_size': product_size,
@@ -173,7 +172,6 @@ def add_item():
         mongo.db.products.insert_one(product)
         # Save to the database logic goes here
         return redirect(url_for('index'))  # Redirect to home page or wherever you want
-    user = mongo.db.users.find_one({'_id': ObjectId(session['user_id'])})  # Fetch user from DB
     return render_template('add_item.html')
 
 
