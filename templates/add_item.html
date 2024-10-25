@@ -2,25 +2,25 @@
 {% block content %}
 
 <h1>Add a New Item</h1>
-<form method="POST">
+<form method="POST" action="{{ url_for('add_item') }}">
 
     <div id="productFields">
         <div class="productField">
             <div class="input-field col s12">
                 <label for="school_name">School Name:</label>
-                <input type="text" id="school_name" name="school_name" value="{{ product.school_name }}" data-length="120" required>
+                <input type="text" id="school_name" name="school_name" data-length="120" required>
             </div>
             <div class="input-field col s12">
                 <label for="items">Item's name:</label>
-                <input type="text" id="product_name" name="product_name" data-length="20" required value="{{ product.product_name }}">
+                <input type="text" id="product_name" name="product_name" data-length="20" required>
             </div>
             <div class="input-field col s12">
                 <label for="items">Item's size:</label>
-                <input type="text" id="product_size" name="product_size" data-length="20" required value="{{ product.product_size }}">
+                <input type="text" id="product_size" name="product_size" data-length="20" required >
             </div>
             <div class="input-field col s12">
                 <label for="items">Item's colour:</label>
-                <input type="text" id="product_colour" name="product_colour" data-length="20" required value="{{ product.product_colour }}">
+                <input type="text" id="product_colour" name="product_colour" data-length="20" required>
             </div>
         </div>
     </div>

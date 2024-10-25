@@ -90,6 +90,7 @@ def login():
     
         if user and check_password_hash(user["user_password"], request.form.get("user_password")):
             session["user"] = username
+            session["user_id"] = str(user["_id"])
             flash(f"Welcome, {username}")
             return redirect(url_for("user_profile", user_name=session["user"]))
         
@@ -149,7 +150,7 @@ def delete_user(user_name):
 @app.route('/add_item', methods=['GET', 'POST'])
 def add_item():
      # Check if user is in session
-    if "user" not in session:
+    if "user_id" not in session:
         flash("You need to log in first")
         return redirect(url_for("login"))
     
@@ -162,17 +163,19 @@ def add_item():
         product_colour = request.form['product_colour']
 
         # Save to the database logic goes here
+
         product = {
+            'user_id': session['user_id'],  # Assuming you have user_id in session
             'school_name': school_name,
             'product_name': product_name,
             'product_size': product_size,
-            'product_colour': product_colour,
+            'product_colour': product_colour
         }
-
         mongo.db.products.insert_one(product)
-        # Save to the database logic goes here
-        return redirect(url_for('index'))  # Redirect to home page or wherever you want
-    return render_template('add_item.html')
+        return redirect(url_for('items_listing'))  # Redirect to items listing page
+
+    user = mongo.db.users.find_one({'_id': ObjectId(session['user_id'])})
+    return render_template('add_item.html', user=user)
 
 
 @app.route('/items_listing')
