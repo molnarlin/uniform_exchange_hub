@@ -1,6 +1,6 @@
 # Milestone project 3
 ## uniform_exchange_hub
-[](/static/images/Mock-up-for-mp3.png)
+![Mock-up](/static/images/Mock-up-for-mp3.png)
 Welcome to the third milestone project for Runshaw College and Code Institute. Our platform, Uniform Exchange Hub, is dedicated to making school uniforms accessible and affordable for everyone. This website allows users to find pre-loved school uniforms, exchange them, donate to a uniform bank, or acquire second-hand uniforms for their children.
 
 Built using MongoDB and Flask, the application offers a comprehensive CRUD (Create, Read, Update, Delete) functionality along with robust user authentication. Users can easily register, log in, log out, edit profiles, view profiles, search for uniforms, and even delete their accounts.
