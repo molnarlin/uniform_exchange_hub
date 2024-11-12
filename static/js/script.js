@@ -48,3 +48,7 @@ document.getElementById('addMoreBtn').addEventListener('click', function() {
     `;
     productFields.appendChild(newField);
 });
+
+function confirmDelete() {
+  return confirm("Are you sure you want to delete this user?");
+}
