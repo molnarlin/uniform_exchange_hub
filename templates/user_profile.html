@@ -48,10 +48,13 @@
       </div>
 
     </div>
-    <div class="col s3">
+    <div class="col s2">
       <a href="{{ url_for('index') }}" class="back-to-home waves-effect waves-light btn-large">Back to Home</a>
     </div>
     <div class="col s3">
+      <a href="{{ url_for('edit_user', user_name=session['user']) }}" class="back-to-home waves-effect waves-light btn-large">Edit User Profile</a>
+    </div>
+    <div class="col s2">
       <form action="{{ url_for('delete_user', user_name=user.user_name) }}" method="post">
         <input class="waves-effect waves-light btn-large" id="delete-button" type="submit" value="Delete Profile">
       </form>
