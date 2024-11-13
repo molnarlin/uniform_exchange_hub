@@ -186,7 +186,9 @@ def items_listing():
         return redirect(url_for("login"))
     # Fetch the items for the logged-in user
     products = mongo.db.products.find({'user_id': session['user_id']})
-    return render_template('items_listing.html', products=products)
+    # Convert cursor to a list 
+    products_list = list(products)
+    return render_template('items_listing.html', products=products_list)
 
 @app.route('/delete_item/<item_id>', methods=['POST'])
 def delete_item(item_id):

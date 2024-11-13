@@ -2,7 +2,7 @@
 {% block content %}
 
 <h3>Available items on this user's profile</h3>
-{% if products %}
+    {% if products %}
         <ul>
             {% for product in products %}
             <div class="row">
@@ -24,7 +24,7 @@
             {% endfor %}
         </ul>
     {% else %}
-        <p>No items added yet.</p>
+        <h5>No items added yet.</h5>
     {% endif %}
     <a href="{{ url_for('add_item') }}" class="waves-effect waves-light btn-large">Add New Item</a>
     <a href="{{ url_for('index') }}" class="waves-effect waves-light btn-large">Back to Home</a>
