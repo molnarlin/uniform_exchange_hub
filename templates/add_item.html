@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Add a New Item</h1>
+<h3>Add a New Item</h3>
 <form method="POST" action="{{ url_for('add_item') }}">
 
     <div id="productFields">
@@ -24,9 +24,8 @@
             </div>
         </div>
     </div>
-    <button type="button" class="waves-effect waves-light btn-large" id="addMoreBtn">Add more</button>
 
-    <button type="submit" class="waves-effect waves-light btn-large">Add items to the profile</button>
+    <button type="submit" class="waves-effect waves-light btn-large">Add this item to the profile</button>
 
     <a href="{{ url_for('index') }}" class="waves-effect waves-light btn-large">Back to Home</a>
 </form>
