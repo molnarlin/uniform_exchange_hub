@@ -6,8 +6,11 @@
 <ul>
     {% for result in results %}
         <li>
-            <h2>School Name: {{ result.school_name }}</h2>
-            <p>Items: {{ result.items | join(', ') }}</p>
+            <h4>School Name: {{ result.school_name }}</h4>
+            <p>Items: {{ result.product_name }}</p>
+            <p>Colour: {{ result.product_colour }}</p>
+            <p>Size: {{ result.product_size }}</p>
+            <a>Product owner's user name: {{ result.user_id }}</a>
         </li>
     {% endfor %}
 </ul>

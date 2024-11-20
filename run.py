@@ -57,7 +57,13 @@ def get_items():
 def search():
     if request.method == "POST":
         search_query = request.form.get("search_query")
-        results = mongo.db.users.find({"$or": [{"school_name": {"$regex": search_query, "$options": "i"}}, {"items": {"$regex": search_query, "$options": "i"}}]})
+        results_cursor = mongo.db.products.find({
+            "$or": [
+                {"school_name": {"$regex": search_query, "$options": "i"}},
+                {"product_name": {"$regex": search_query, "$options": "i"}}
+            ]
+        })
+        results = list(results_cursor)  # Convert the cursor to a list
         return render_template("search_result.html", results=results, search_query=search_query)
     return render_template("search.html")
 
