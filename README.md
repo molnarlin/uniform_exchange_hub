@@ -100,6 +100,358 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    * Official (jigsaw) CSS validator link validator for testing CSS, and my code had no errors.
    * Lighthouse report in Google Chrome. I checked the accessibility, performance, and best practices here.
    ### 7.2 Test Plan Tables
+   ***********************************
+   **7.2.1. Test Plan Table for Microsoft Edge on Desktop for Home page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ***********************************
+   **Test Plan Table for Microsoft Edge on Desktop for Log In page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ************************************
+   **Test Plan Table for Microsoft Edge on Desktop for Register page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ************************************
+   **Test Plan Table for Microsoft Edge on Desktop for Search page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Microsoft Edge on Desktop for Profile page**
+   ***********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Microsoft Edge on Desktop for Edit Profile page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Microsoft Edge on Desktop for Add Item page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Microsoft Edge on Desktop for List items page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   **************************************
+   **7.2.2. Test Plan Table for Google Chrome on Desktop for Home page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ***********************************
+   **Test Plan Table for Google Chrome on Desktop for Log In page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ************************************
+   **Test Plan Table for Google Chrome on Desktop for Register page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ************************************
+   **Test Plan Table for Google Chrome on Desktop for Search page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Desktop for Profile page**
+   ***********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Desktop for Edit Profile page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Desktop for Add Item page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Desktop for List items page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   **************************************
+   **7.2.3. Test Plan Table for Google Chrome on Chromebook for Home page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ***********************************
+   **Test Plan Table for Google Chrome on Chromebook for Log In page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ************************************
+   **Test Plan Table for Google Chrome on Chromebook for Register page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ************************************
+   **Test Plan Table for Google Chrome on Chromebook for Search page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Chromebook for Profile page**
+   ***********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Chromebook for Edit Profile page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Chromebook for Add Item page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Chromebook for List items page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   
+   **************************************
+   **7.2.4. Test Plan Table for Google Chrome on Samsung Galaxy phone for Home page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ***********************************
+   **Test Plan Table for Google Chrome on Samsung Galaxy phone for Log In page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ************************************
+   **Test Plan Table for Google Chrome on Samsung Galaxy phone for Register page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   ************************************
+   **Test Plan Table for Google Chrome on Samsung Galaxy phone for Search page**
+   **********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Samsung Galaxy phone for Profile page**
+   ***********
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Samsung Galaxy phone for Edit Profile page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Samsung Galaxy phone for Add Item page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   *************************************
+   **Test Plan Table for Google Chrome on Samsung Galaxy phone for List items page**
+   *************
+   |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
+   |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
+   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+
 
 ## 8. Fixed bugs
 I came across a couple of bugs and I briefly explained how I fixed them here.
