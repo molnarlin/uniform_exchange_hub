@@ -42,16 +42,26 @@ As developers, our objectives are to:
 
 ## 3. Features
    ### 3.1. Existing features
-   * Navigation bar on the top helps to navigate between different pages.
-   Nav bar for logged in users: ![After logged in](/static/images/nav-loggedin.PNG)
-   Nav bar, when the user haven't logged in yet: ![Logged out user](/static/images/nav-loggedout.PNG)
-   * User registration and authentication. ![Log in](/static/images/log-in.PNG) ![Register]()
-   * Profile display, and management. ![Profile page](/static/images/profile-example.PNG)
-   * Adding items to user's profile. ![Add item page](/static/images/add-item.PNG)
-   * Listing items for users on their profile. ![List of items page](/static/images/list-of-items.PNG)
-   * Uniform search. ![Search](/static/images/search-page.PNG)
-   * Intorduction to this charity website. ![Home page](/static/images/home-page.PNG)
-   * Footer with some additional information. ![Footer](/static/images/footer.PNG)
+   * Navigation bar on the top helps to navigate between different pages. \
+   Nav bar for logged in users:\
+    ![After logged in](/static/images/nav-loggedin.PNG) \
+   Nav bar, when the user haven't logged in yet: \
+    ![Logged out user](/static/images/nav-loggedout.PNG)
+   * User registration and authentication. \
+    ![Log in](/static/images/log-in.PNG) \
+     ![Register]()
+   * Profile display, and management. \
+    ![Profile page](/static/images/profile-example.PNG)
+   * Adding items to user's profile. \
+    ![Add item page](/static/images/add-item.PNG)
+   * Listing items for users on their profile. \
+    ![List of items page](/static/images/list-of-items.PNG)
+   * Uniform search. \
+    ![Search](/static/images/search-page.PNG)
+   * Intorduction to this charity website. \
+    ![Home page](/static/images/home-page.PNG)
+   * Footer with some additional information. \
+    ![Footer](/static/images/footer.PNG)
    ### 3.2. Future features
    * Possibility to share this website on social media like Instagram, Facebook, etc.
    * Basis chat function to answer some questions or if AI can't answer the question, send an email to Support.
