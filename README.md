@@ -49,7 +49,7 @@ As developers, our objectives are to:
     ![Logged out user](static/images/nav-loggedout.PNG)
    * User registration and authentication. \
     ![Log in](static/images/log-in.PNG) \
-     ![Register]()
+     ![Register](static/images/register.PNG)
    * Profile display, and management. \
     ![Profile page](static/images/profile-example.PNG)
    * Adding items to user's profile. \
