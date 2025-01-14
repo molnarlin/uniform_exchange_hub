@@ -2,6 +2,7 @@ body {
     background-color: aquamarine;
     height: 100%;
     text-shadow: 2px 2px 5px gray;
+    font-family: 'Raleway', serif ;
 }
 
 .masthead{
