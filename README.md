@@ -96,7 +96,7 @@ I modified my wireframe a couple of times; this is the latest version. This wire
 * I used [www.canva.com](https://www.canva.com) to create mockups for different screen sizes.
 ## 7. Testing
    ### 7.1 Code validation
-   * I used the official W3C validatorW3C validator link for testing HTML, and there were no errors.
+   * I used the official W3C validator for testing HTML, and there were no errors.
    * Official (jigsaw) CSS validator link validator for testing CSS, and my code had no errors.
    * Lighthouse report in Google Chrome. I checked the accessibility, performance, and best practices here.
    ### 7.2 Test Plan Tables
