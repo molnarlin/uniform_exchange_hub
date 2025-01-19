@@ -68,7 +68,9 @@ As developers, our objectives are to:
    * Connecting TrustPilot or other website, and asking people for reviews.
 ## 4. Typography and color scheme
 * Google Fonts: I used Raleway font-family, and serif for backup.
-* Colour palette: \ ![Colour palette](/static/images/colour-palette.PNG)
+![Raleway](static/images/raleway.PNG)
+* Colour palette: \
+![Colour palette](static/images/colour-palette.PNG)
 * Images for the website were created with Microsoft Copilot
 ## 5. Wireframes
 I used Balsamiq to create my wireframes. There are more pages, you can chack them here: 

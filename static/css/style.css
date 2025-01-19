@@ -16,6 +16,10 @@ body {
     padding-bottom: 20vh;
 }
 
+#subheading{
+    font-size: 3vh;
+}
+
 #register-img{
     width: 30vh;
     margin-right: 10%;
