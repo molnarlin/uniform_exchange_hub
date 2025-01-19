@@ -100,7 +100,8 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    ### 7.1 Code validation
    * I used the official [W3C validator](https://validator.w3.org/) for testing HTML, and there were no errors. \
    ![HTML validator](static/images/html%20checker.PNG)
-   * [Official (jigsaw) validator](https://jigsaw.w3.org/css-validator/validator.html.en) for testing CSS, and my code had no errors.
+   * [Official (jigsaw) validator](https://jigsaw.w3.org/css-validator/validator.html.en) for testing CSS, and my code had no errors. \
+   ![CSS validator](static/images/css%20validation.PNG)
    * I used 
    * Lighthouse report in Google Chrome. I checked the accessibility, performance, and best practices here.
    ### 7.2 Test Plan Tables
