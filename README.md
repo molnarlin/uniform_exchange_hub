@@ -98,7 +98,8 @@ I modified my wireframe a couple of times; this is the latest version. This wire
 * I used [www.canva.com](https://www.canva.com) to create mockups for different screen sizes.
 ## 7. Testing
    ### 7.1 Code validation
-   * I used the official [W3C validator](https://validator.w3.org/) for testing HTML, and there were no errors.
+   * I used the official [W3C validator](https://validator.w3.org/) for testing HTML, and there were no errors. \
+   ![HTML validator](static/images/html%20checker.PNG)
    * [Official (jigsaw) validator](https://jigsaw.w3.org/css-validator/validator.html.en) for testing CSS, and my code had no errors.
    * I used 
    * Lighthouse report in Google Chrome. I checked the accessibility, performance, and best practices here.
