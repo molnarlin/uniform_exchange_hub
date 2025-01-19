@@ -77,7 +77,3 @@ input::placeholder {
     height: 50px;
     background-color: rgb(63, 189, 147);
 }
-
-.table-of-contents a{
-    letter-spacing: 0.9;
-}
