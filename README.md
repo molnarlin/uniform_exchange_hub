@@ -618,8 +618,34 @@ I modified my wireframe a couple of times; this is the latest version. This wire
 ## 8. Fixed bugs
 I came across a couple of bugs and I briefly explained how I fixed them here.
 - I couldn't display user's profile.
-- I had problem connacting to Heroku. I had to update requirements.txt to make it work.
-- Search wasn't working.
+I had to create `<div></div>` for each input field, and add a label to them. The value for the input fields come from MongoDB. I added a function to the run.py file to call user's data from Database.
+```
+def get_user_data(form):
+    return {
+        "user_name": form.get("user_name").lower(),
+        "contact_email": form.get("contact_email").lower(),
+        "contact_person": form.get("contact_person"),
+        "contact_phone": form.get("contact_phone"),
+        "contact_address": form.get("contact_address"),
+        "school_name": form.get("school_name"),
+        "event_place": form.get("event_place"),
+        "event_date": form.get("event_date"),
+    }
+```
+- I had problem connacting to Heroku. I had to update requirements.txt to make it work.\
+```pip3 install -r requirements.txt```
+- Search wasn't working. In MongoDB I have 2 collections. I had to create a function for the products as well.
+```
+def get_item_data(form):
+    return{
+        "product_name": form.get("product_name"),
+        "school_name": form.get("school_name"),
+        "product_size": form.get("product_size"),
+        "product_colour": form.get("product_colour")
+    }
+```
+I had to make search queries for school name and product name, so it was possible to search them. At the end I had to convert everything to a list, so the users can read the list on the search result page.
+
 ## 9. Supported screens and browsers
 I used Google Chrome's Inspect tool to test my webpage on various devices with different screen sizes, please see picture below. I found that it rendered well without any issues. I checked the website in Microsoft Edge, Samsung Internet Browser and Google Chrome as well, but I could not find any problems. The site looked responsive and performed as expected.
 ## 10. Deployment
