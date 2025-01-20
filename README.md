@@ -652,7 +652,7 @@ I used Google Chrome's Inspect tool to test my webpage on various devices with d
    ### 10.1. via VS Code
    If you want to open the file locally, first type python3 -m http.server, open a new terminal, type `python3 run.py` in terminal. There will be 2 ports, open 5000 in Browser.
    ### 10.2. via Heroku
-   I deployed it on [Heroku](https://uniform-exchange-hub-9de6578280cd.herokuapp.com/)
+   First I installed Heroku to my codespace. I logged in to Heroku from the codespace. I connected git remote to Heroku. Created Procfile and requirements.txt. I pushed my code to Heroku. I copied env.py to the required place in Heroku, and I deployed the website. You can check the live website here: [Heroku](https://uniform-exchange-hub-9de6578280cd.herokuapp.com/)
 ## 11. Credits
 - I used Code Institute's Task Manager walk through project as a starting point for this.
 - I needed to learn about Mongo DB, so I bought an Udemy course, what I used to understand, how to communicate with Mongo DB.
