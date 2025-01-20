@@ -111,33 +111,48 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |External links work|User can visit website|If user click the link , can visit the website|As expected|Pass|20/1/25|None
+   |Picture appears|Picture is visible|Next to the text (Why register with Us?), there is a picture|As expected|Pass|20/1/25|None
+   |Dropdown test|Users can check answers|Clicking on dropdown, user can read the answer|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ***********************************
    **Test Plan Table for Microsoft Edge on Desktop for Log In page**
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Input field test|Input field for username and password works|User can write username and password in the input field|As expected|Pass|20/1/25|None
+   |Log in button test|User can log in using the button|Clicking the log in button, user can log in|As expected|Pass|20/1/25|None
+   |Register hyperlink test|User can navigate to the Register page|Clicking on the register link, user navigate to the register page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ************************************
    **Test Plan Table for Microsoft Edge on Desktop for Register page**
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Input field test|Input field for username, password and confirm password works|User can write username and password in the input field|As expected|Pass|20/1/25|None
+   |Register button test|User can register using the button|Clicking the register button, user can register|As expected|Pass|20/1/25|None
+   |Log in hyperlink test|User can navigate to the Log in page|Clicking on the log in link, user navigate to the log in page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ************************************
    **Test Plan Table for Microsoft Edge on Desktop for Search page**
@@ -199,33 +214,48 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |External links work|User can visit website|If user click the link , can visit the website|As expected|Pass|20/1/25|None
+   |Picture appears|Picture is visible|Next to the text (Why register with Us?), there is a picture|As expected|Pass|20/1/25|None
+   |Dropdown test|Users can check answers|Clicking on dropdown, user can read the answer|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ***********************************
    **Test Plan Table for Google Chrome on Desktop for Log In page**
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Input field test|Input field for username and password works|User can write username and password in the input field|As expected|Pass|20/1/25|None
+   |Log in button test|User can log in using the button|Clicking the log in button, user can log in|As expected|Pass|20/1/25|None
+   |Register hyperlink test|User can navigate to the Register page|Clicking on the register link, user navigate to the register page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ************************************
    **Test Plan Table for Google Chrome on Desktop for Register page**
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Input field test|Input field for username, password and confirm password works|User can write username and password in the input field|As expected|Pass|20/1/25|None
+   |Register button test|User can register using the button|Clicking the register button, user can register|As expected|Pass|20/1/25|None
+   |Log in hyperlink test|User can navigate to the Log in page|Clicking on the log in link, user navigate to the log in page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ************************************
    **Test Plan Table for Google Chrome on Desktop for Search page**
@@ -287,33 +317,48 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |External links work|User can visit website|If user click the link , can visit the website|As expected|Pass|20/1/25|None
+   |Picture appears|Picture is visible|Next to the text (Why register with Us?), there is a picture|As expected|Pass|20/1/25|None
+   |Dropdown test|Users can check answers|Clicking on dropdown, user can read the answer|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ***********************************
    **Test Plan Table for Google Chrome on Chromebook for Log In page**
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Input field test|Input field for username and password works|User can write username and password in the input field|As expected|Pass|20/1/25|None
+   |Log in button test|User can log in using the button|Clicking the log in button, user can log in|As expected|Pass|20/1/25|None
+   |Register hyperlink test|User can navigate to the Register page|Clicking on the register link, user navigate to the register page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ************************************
    **Test Plan Table for Google Chrome on Chromebook for Register page**
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Input field test|Input field for username, password and confirm password works|User can write username and password in the input field|As expected|Pass|20/1/25|None
+   |Register button test|User can register using the button|Clicking the register button, user can register|As expected|Pass|20/1/25|None
+   |Log in hyperlink test|User can navigate to the Log in page|Clicking on the log in link, user navigate to the log in page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ************************************
    **Test Plan Table for Google Chrome on Chromebook for Search page**
@@ -375,33 +420,48 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |External links work|User can visit website|If user click the link , can visit the website|As expected|Pass|20/1/25|None
+   |Picture appears|Picture is visible|Next to the text (Why register with Us?), there is a picture|As expected|Pass|20/1/25|None
+   |Dropdown test|Users can check answers|Clicking on dropdown, user can read the answer|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ***********************************
    **Test Plan Table for Google Chrome on Samsung Galaxy phone for Log In page**
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Input field test|Input field for username and password works|User can write username and password in the input field|As expected|Pass|20/1/25|None
+   |Log in button test|User can log in using the button|Clicking the log in button, user can log in|As expected|Pass|20/1/25|None
+   |Register hyperlink test|User can navigate to the Register page|Clicking on the register link, user navigate to the register page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ************************************
    **Test Plan Table for Google Chrome on Samsung Galaxy phone for Register page**
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text of the website appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Input field test|Input field for username, password and confirm password works|User can write username and password in the input field|As expected|Pass|20/1/25|None
+   |Register button test|User can register using the button|Clicking the register button, user can register|As expected|Pass|20/1/25|None
+   |Log in hyperlink test|User can navigate to the Log in page|Clicking on the log in link, user navigate to the log in page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    ************************************
    **Test Plan Table for Google Chrome on Samsung Galaxy phone for Search page**
