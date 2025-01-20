@@ -79,5 +79,5 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 1000px) {
-     #register-img { width: 65vw; margin-left: 15%; } 
+     #register-img { width: 65vw; margin-left: 15%; margin-top: 10%;} 
 }
