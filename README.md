@@ -159,55 +159,79 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Input field test|Input field for search items works|User can write text in the input field|As expected|Pass|20/1/25|None
+   |Search button test|User can start search using the button|Clicking the Search button, user can start search|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Microsoft Edge on Desktop for Profile page**
    ***********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Edit user profile button test|User can edit profile page using the button|Clicking the button, user goes to edit profile page|As expected|Pass|20/1/25|None
+   |Delete profile button test|User can delete profile using the button|Clicking the button, user can delete their profile from the system|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Microsoft Edge on Desktop for Edit Profile page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Editing text in input fields|User can update text in the input fields|User can update text|As expected|Pass|20/1/25|None
+   |Save updates button test|User can save changes on this page|Clicking the button, user save changes|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Microsoft Edge on Desktop for Add Item page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Adding text in input fields|User can write text in the input fields|User can write text|As expected|Pass|20/1/25|None
+   |Add this item to the profile button test|User can save item on their profile page|Clicking the button, user add item|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Microsoft Edge on Desktop for List items page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Edit button test|User can edit item's data|User goes to Edit item page by clicking this button|As expected|Pass|20/1/25|None
+   |Delete button test|User can delete item from their profile|Clicking this button, the item disappears from user's profile|As expected|Pass|20/1/25|None
+   |Add new item item button test|User can add new item to their profile page|Clicking the button, user goes to Add item page|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    **************************************
    **7.2.2. Test Plan Table for Google Chrome on Desktop for Home page**
@@ -262,55 +286,79 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Input field test|Input field for search items works|User can write text in the input field|As expected|Pass|20/1/25|None
+   |Search button test|User can start search using the button|Clicking the Search button, user can start search|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Desktop for Profile page**
    ***********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Edit user profile button test|User can edit profile page using the button|Clicking the button, user goes to edit profile page|As expected|Pass|20/1/25|None
+   |Delete profile button test|User can delete profile using the button|Clicking the button, user can delete their profile from the system|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Desktop for Edit Profile page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Editing text in input fields|User can update text in the input fields|User can update text|As expected|Pass|20/1/25|None
+   |Save updates button test|User can save changes on this page|Clicking the button, user save changes|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Desktop for Add Item page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Adding text in input fields|User can write text in the input fields|User can write text|As expected|Pass|20/1/25|None
+   |Add this item to the profile button test|User can save item on their profile page|Clicking the button, user add item|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Desktop for List items page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Edit button test|User can edit item's data|User goes to Edit item page by clicking this button|As expected|Pass|20/1/25|None
+   |Delete button test|User can delete item from their profile|Clicking this button, the item disappears from user's profile|As expected|Pass|20/1/25|None
+   |Add new item item button test|User can add new item to their profile page|Clicking the button, user goes to Add item page|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    **************************************
    **7.2.3. Test Plan Table for Google Chrome on Chromebook for Home page**
@@ -365,55 +413,79 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Input field test|Input field for search items works|User can write text in the input field|As expected|Pass|20/1/25|None
+   |Search button test|User can start search using the button|Clicking the Search button, user can start search|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Chromebook for Profile page**
    ***********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Edit user profile button test|User can edit profile page using the button|Clicking the button, user goes to edit profile page|As expected|Pass|20/1/25|None
+   |Delete profile button test|User can delete profile using the button|Clicking the button, user can delete their profile from the system|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Chromebook for Edit Profile page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Editing text in input fields|User can update text in the input fields|User can update text|As expected|Pass|20/1/25|None
+   |Save updates button test|User can save changes on this page|Clicking the button, user save changes|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Chromebook for Add Item page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Adding text in input fields|User can write text in the input fields|User can write text|As expected|Pass|20/1/25|None
+   |Add this item to the profile button test|User can save item on their profile page|Clicking the button, user add item|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Chromebook for List items page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Edit button test|User can edit item's data|User goes to Edit item page by clicking this button|As expected|Pass|20/1/25|None
+   |Delete button test|User can delete item from their profile|Clicking this button, the item disappears from user's profile|As expected|Pass|20/1/25|None
+   |Add new item item button test|User can add new item to their profile page|Clicking the button, user goes to Add item page|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
    
    **************************************
    **7.2.4. Test Plan Table for Google Chrome on Samsung Galaxy phone for Home page**
@@ -468,55 +540,79 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    **********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Input field test|Input field for search items works|User can write text in the input field|As expected|Pass|20/1/25|None
+   |Search button test|User can start search using the button|Clicking the Search button, user can start search|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Samsung Galaxy phone for Profile page**
    ***********
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Edit user profile button test|User can edit profile page using the button|Clicking the button, user goes to edit profile page|As expected|Pass|20/1/25|None
+   |Delete profile button test|User can delete profile using the button|Clicking the button, user can delete their profile from the system|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Samsung Galaxy phone for Edit Profile page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Editing text in input fields|User can update text in the input fields|User can update text|As expected|Pass|20/1/25|None
+   |Save updates button test|User can save changes on this page|Clicking the button, user save changes|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Samsung Galaxy phone for Add Item page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Adding text in input fields|User can write text in the input fields|User can write text|As expected|Pass|20/1/25|None
+   |Add this item to the profile button test|User can save item on their profile page|Clicking the button, user add item|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
    *************************************
    **Test Plan Table for Google Chrome on Samsung Galaxy phone for List items page**
    *************
    |Test| User requirement addressed | Expected result | Actual result | Pass / Fail | Date | Corrective Action
    |--------------:|:--------------------------:|:---------------:|:-------------:|:-----------:|:----:|:-----------------
-   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|5/1/25|None
-   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|5/1/25|None
-   |Text appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
-
-   |Footer appears|Text is visible|Text is readable|As expected|Pass|5/1/25|None
+   |Nav-bar appears|Website is easy to navigate|Nav-bar appears|As expected|Pass|20/1/25|None
+   |Nav-bar hyperlinks work|Website is easy to navigate|When you move the mouse over, it will become green and underlined.|As expected|Pass|20/1/25|None
+   |Hero image appears|Hero image is visible|Hero image is on the top of the website|As expected|Pass|20/1/25|None
+   |Website name and subtitle appears|Text is readable|Text is visible|As expected|Pass|20/1/25|None
+   |Text appears in the right input field|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Edit button test|User can edit item's data|User goes to Edit item page by clicking this button|As expected|Pass|20/1/25|None
+   |Delete button test|User can delete item from their profile|Clicking this button, the item disappears from user's profile|As expected|Pass|20/1/25|None
+   |Add new item item button test|User can add new item to their profile page|Clicking the button, user goes to Add item page|As expected|Pass|20/1/25|None
+   |Back to home button test|User can go to Home page using the button|Clicking the button, user goes back to Home page|As expected|Pass|20/1/25|None
+   |Footer appears|Text is visible|Text is readable|As expected|Pass|20/1/25|None
+   |Footer's links work|Website is easy to navigate|Clicking on the link, goes to the right place|As expected|Pass|20/1/25|None
 
 
 ## 8. Fixed bugs
