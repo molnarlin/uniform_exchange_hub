@@ -102,7 +102,8 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    ![HTML validator](static/images/html%20checker.PNG)
    * [Official (jigsaw) validator](https://jigsaw.w3.org/css-validator/validator.html.en) for testing CSS, and my code had no errors. \
    ![CSS validator](static/images/css%20validation.PNG)
-   * I used 
+   * I used JSHint [JSHint](https://jshint.com) to validate JavaScript code. \
+   ![JSHint test](/static/images/jsvalidation.PNG)
    * Lighthouse report in Google Chrome. I checked the accessibility, performance, and best practices here. \
    ![lighthouse report](static/images/lighthouse.PNG)
    ### 7.2 Test Plan Tables
