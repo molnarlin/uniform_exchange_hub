@@ -103,7 +103,8 @@ I modified my wireframe a couple of times; this is the latest version. This wire
    * [Official (jigsaw) validator](https://jigsaw.w3.org/css-validator/validator.html.en) for testing CSS, and my code had no errors. \
    ![CSS validator](static/images/css%20validation.PNG)
    * I used 
-   * Lighthouse report in Google Chrome. I checked the accessibility, performance, and best practices here.
+   * Lighthouse report in Google Chrome. I checked the accessibility, performance, and best practices here. \
+   ![lighthouse report](static/images/lighthouse.PNG)
    ### 7.2 Test Plan Tables
    ***********************************
    **7.2.1. Test Plan Table for Microsoft Edge on Desktop for Home page**
